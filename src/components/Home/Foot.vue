@@ -24,13 +24,14 @@ export default {
 	footer{
 		border-top: 1px solid #f0f2f3;
     	padding: 40px 0;
-    	background-color: #fff;
+    	background-color: rgba(21, 31, 44, 0.1);
 	}
 
 	div{
 		width: 1170px;
 		height: auto;
 		margin: 0 auto;
+		padding: 0 15px;
 	}
 
 	p{

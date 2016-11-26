@@ -25,7 +25,7 @@ export default{
 			},
 			liItems:[
 				{title:"首页",src:'http://suvllian.com'},
-				{title:"摄影大赛",src:'http://suvllian.com'},
+				{title:"摄影大赛",src:'camera/v/'},
 				{title:"专题展示",src:'http://suvllian.com'},
 				{title:"新闻周刊",src:'http://suvllian.com'},
 				{title:"关于我们",src:'http://suvllian.com'}
@@ -57,7 +57,7 @@ export default{
 	.container{
 		width: 1170px;
 		height: 96px;
-		padding:0px 0;
+		padding:0px 15px;
 		margin: 0 auto;
 	}
 
