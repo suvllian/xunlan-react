@@ -25,6 +25,8 @@ export default {
 		border-top: 1px solid #f0f2f3;
     	padding: 40px 0;
     	background-color: rgba(21, 31, 44, 0.1);
+
+		min-width: 1170px;
 	}
 
 	div{

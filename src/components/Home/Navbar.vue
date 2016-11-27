@@ -35,7 +35,7 @@ export default{
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	header{
 		height: 96px;
 		width: 100%;
@@ -46,6 +46,8 @@ export default{
 		position: relative;
 		top: 0;
 		left: 0;
+
+		min-width: 1170px;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -76,17 +78,21 @@ export default{
 	    margin-top: 1em;
 	    padding-top: 15px;
 	    text-transform: uppercase;
-	}
 
-	#logo a {
-	    border: 2px solid #00adb5;
-	    color: rgba(21, 31, 44, 0.8);
-	    padding: 0 7px;
-	    position: relative;
-	}
+	    a {
+		    border: 2px solid #00adb5;
+		    color: rgba(21, 31, 44, 0.8);
+		    padding: 0 7px;
+		    position: relative;
 
-	#logo a:hover,#logo a:focus{
-	    color: rgba(0, 0,0 , 0.9);
+		    &:hover{
+		    	color: rgba(0, 0,0 , 0.9);
+		    }
+
+		    &:focus{
+		    	color: rgba(0, 0,0 , 0.9);
+		    }
+		}
 	}
 
 	nav{
@@ -94,43 +100,43 @@ export default{
 	    float: right;
 	    position: relative;
 	    z-index: 2;
-	}
 
-	nav ul{
-	    color: #848484;
-	    font-family: "Open Sans",Arial,serif;
-	    font-size: 18px;
-	    height: 96px;
-	    font-weight: 300;
-	    margin:0 1em 0 0;
-	}
+	    ul{
+		    color: #848484;
+		    font-family: "Open Sans",Arial,serif;
+		    font-size: 18px;
+		    height: 96px;
+		    font-weight: 300;
+		    margin:0 1em 0 0;
 
-	nav ul li{
-		float: left;
-		height: 96px;
-	    padding-top: 15px;
-		position: relative;
-		list-style: none;
-		transition: 1s all ease;
-	}
+		    li{
+				float: left;
+				height: 96px;
+			    padding-top: 15px;
+				position: relative;
+				list-style: none;
+				transition: 1s all ease;
 
-	nav ul li a{
-		display: block;
-		position: relative;
-	    color: rgba(0, 0, 0, 0.8);
-	    font-size: 14px;
-	    font-weight: 400;
-	    padding: 2em 1.3em !important;
-	    text-decoration: none;
-	    text-transform: uppercase;
-		transition: 0.5s all ease;
-	}
+				a{
+					display: block;
+					position: relative;
+				    color: rgba(0, 0, 0, 0.8);
+				    font-size: 14px;
+				    font-weight: 400;
+				    padding: 2em 1.3em !important;
+				    text-decoration: none;
+				    text-transform: uppercase;
+					transition: 0.5s all ease;
+				}
 
-	nav ul li:hover{
-		background-color: #00adb5;
-	}
+				&:hover{
+					background-color: #00adb5;
 
-	nav ul li:hover a{
-		color: #fff;
+					a{
+						color: #fff;
+					}
+				}
+			}
+		}
 	}
 </style>
