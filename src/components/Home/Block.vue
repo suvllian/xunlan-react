@@ -4,8 +4,8 @@
 			<div class="row-half">
 				<div class="col-half-inner col-half-inner-bg-1">
 					<div class="desc">
-						<h3>技术部</h3>
-						<p>主要负责长安大学官方微信的功能开发和维护，中国大学生在线共建频道的前端网页的专题制作，网站开发以及维护工作等。</p>
+						<h3>About Us</h3>
+						<p>Powered By Suvllian</p>
 						<p>
 							<a href="">Read More</a>
 						</p>
@@ -22,8 +22,8 @@
 				</a>
 				<div class="col-half-inner col-half-inner-bg-2">
 					<div class="desc">
-						<h3>新媒体部</h3>
-						<p>主要负责长安大学官方微信、微博的运营，是校内文化传播、师生交流、服务师生的良好平台。日常工作由编辑、设计师、摄影等职能共同承担完成。</p>
+						<h3>About Us</h3>
+						<p>Powered By Suvllian</p>
 						<p>
 							<a href="">Read More</a>
 						</p>
@@ -33,13 +33,11 @@
 		</div>
 
 		<div class="col-half col-half-2">
-			<h2>新闻部</h2>
-			<p>主要负责教育部中国大学生在线和【与道同行】共建平台的投稿工作。</p>
-			<p>对学校重大活动进行采稿、拍照工作，并及时上传、发表，以及采访稿的写作。
-			</p>
+			<h3>About Us</h3>
+			<p>Powered By Suvllian</p>
 
-			<h2>秘书处</h2>
-			<p>主要负责工作社的日常事务管理及与各部门之间的沟通联系<br/>以及与校内其他兄弟组织的沟通和联系，具体工作包括：<br/><em>信息传达、财务管理、制度建设、文件草拟、对外交流合作</em>等。</p>
+			<h3>About Us</h3>
+			<p>Powered By Suvllian</p>
 		</div>
 	</section>
 </template>
@@ -51,7 +49,7 @@
 		background-color: rgba(45, 64, 89, 0.1) none repeat scroll 0 0;
 		display: flex;
 		flex-wrap: wrap;
-
+		margin-top:6px;
 		min-width: 1170px;
 	}
 

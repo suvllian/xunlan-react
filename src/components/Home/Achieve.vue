@@ -41,8 +41,13 @@
 		background: white none repeat scroll 0 0;
     	box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.22);
 		z-index: 2;
-		padding-top: 1.32em;
+		padding-top: 2.4em;
 		text-align: center;
+		min-width:1170px;
+
+		>div{
+			min-width: 1170px;
+		}
 
 		i{
 			max-width: $iconsize;

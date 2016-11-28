@@ -82,7 +82,7 @@ export default{
 		width: 100%;
 		position: relative;
 		left: 0;
-
+		top:6px;
 		min-width: 1170px;
 	}
 
