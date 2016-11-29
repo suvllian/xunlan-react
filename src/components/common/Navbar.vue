@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import routes from './../../routes'
+
 export default{
 	data(){
 		return{
@@ -24,13 +26,16 @@ export default{
 				src:"http://suvllian.com"
 			},
 			liItems:[
-				{title:"首页",src:'http://suvllian.com'},
-				{title:"摄影大赛",src:'camera/v/'},
-				{title:"专题展示",src:'http://suvllian.com'},
-				{title:"新闻周刊",src:'http://suvllian.com'},
-				{title:"关于我们",src:'http://suvllian.com'}
+				{title:"首页",src:'/'},
+				{title:"摄影大赛",src:'/camera'},
+				{title:"专题展示",src:''},
+				{title:"新闻周刊",src:''},
+				{title:"关于我们",src:''}
 			]
 		}
+	},
+	methods:{
+		
 	}
 }
 </script>
@@ -138,5 +143,19 @@ export default{
 				}
 			}
 		}
+	}
+</style>
+
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		text-decoration: none;
+        box-sizing: border-box;
+	}	
+	body{
+		background: #f9f9f9 none repeat scroll 0 0;
+		color: #89867e;
+	    font-family: "Lato",Calibri,Arial,sans-serif;
 	}
 </style>

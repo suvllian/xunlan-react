@@ -1,16 +1,17 @@
 <template>
-  <div id="app">
-    <Home></Home>
+  <div>
+    <h1>摄影大赛111</h1>
   </div>
 </template>
 
 <script>
-import Home from './components/Home/'
+import MainLayout from '../layouts/Main.vue'
+
 
 export default {
   name: 'app',
   components: {
-    Home
+    MainLayout
   }
 }
 </script>
