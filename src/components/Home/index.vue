@@ -5,7 +5,8 @@
     <slogan></slogan>
     <achieve></achieve>
     <show-image></show-image>
-    <link></link>
+    <link-block></link-block>
+    <connect></connect>
   </main-layout>
 </template>
 
@@ -17,12 +18,13 @@ import Block from './Block'
 import ShowImage from './ShowImage'
 import Slogan from './Slogan'
 import Achieve from './Achieve'
-import Link from './Link'
+import LinkBlock from './Link'
+import Connect from './Connect'
 
 export default {
   name: 'app',
   components: {
-    MainLayout,Slider,Block,ShowImage,Slogan,Achieve,Link
+    MainLayout,Slider,Block,ShowImage,Slogan,Achieve,LinkBlock,Connect
   }
 }
 </script>

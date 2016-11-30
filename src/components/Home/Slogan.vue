@@ -44,6 +44,7 @@
 		position:absolute;
 		margin-top: $paddingSize;
 		background: url(./../../assets/fix-bg.jpg) fixed 40% 100%;
+		opacity: 0.48;
 	}
 
 	.slogan-shadow{

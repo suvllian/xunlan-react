@@ -156,6 +156,7 @@ export default{
 	body{
 		background: #f9f9f9 none repeat scroll 0 0;
 		color: #89867e;
+		font-size: 16px;
 	    font-family: "Lato",Calibri,Arial,sans-serif;
 	}
 </style>

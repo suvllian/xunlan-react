@@ -3,7 +3,6 @@
 		<div>
 			<i><img src="./../../assets/link.png"></i>
 			<h2>友情链接</h2>
-
 		</div>
 	</section>
 </template>
@@ -20,12 +19,12 @@
 	section{
 		@include common-insize;
 		padding-top: 2.4em;
-    	box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.22);
+		background:  #fff;
 	}
 
 	h2{
 		color: rgba(0, 0, 0, 0.7);
-			font-weight: 400;
+		font-weight: 400;
 		margin: 0 0 30px;
 		font-size: 34px;
 		text-align: center;
