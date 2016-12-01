@@ -1,5 +1,6 @@
 <template>
   <main-layout>
+    <vote-image></vote-image>
     <slider></slider>
     <block></block>
     <slogan></slogan>
@@ -20,11 +21,12 @@ import Slogan from './Slogan'
 import Achieve from './Achieve'
 import LinkBlock from './Link'
 import Connect from './Connect'
+import VoteImage from './VoteImage'
 
 export default {
   name: 'app',
   components: {
-    MainLayout,Slider,Block,ShowImage,Slogan,Achieve,LinkBlock,Connect
+    MainLayout,Slider,Block,ShowImage,Slogan,Achieve,LinkBlock,Connect,VoteImage
   }
 }
 </script>

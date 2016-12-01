@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1>摄影大赛111</h1>
-  </div>
+  <main-layout>
+    <h1>摄影大赛</h1>
+  </main-layout>
 </template>
 
 <script>

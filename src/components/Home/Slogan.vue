@@ -18,7 +18,6 @@
 
 <style lang="scss" scoped>
 	$iconsize:4em;
-
 	$paddingSize:-2.4em;
 
 	@mixin common-insize{

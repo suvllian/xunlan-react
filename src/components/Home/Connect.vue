@@ -8,6 +8,7 @@
 	section{
 		height: 36em;
 		width: 100%;
+		min-width: 1170px;
     	box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.22);
 		position: relative;
 
