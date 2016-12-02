@@ -23,6 +23,7 @@
 		    		</div>
 		    	</div>
 			</div>
+
 		</div>
 	</section>
 </template>
@@ -78,23 +79,22 @@ export default{
 
 <style lang="scss" scoped>
 	.slider{
-		height: 56em;
+		height: 56rem;
 		width: 100%;
 		position: relative;
 		left: 0;
 		top:6px;
-		min-width: 1170px;
 	}
 
 	.container{
-		height: 56em;
+		height: 56rem;
 		width: 100%;
 		position: relative;
 		margin: 0 auto;
 	}
 
 	.slide-first{
-		height: 56em;
+		height: 56rem;
 		width: 100%;
 		background-image: url(./../../assets/2.jpg);
 		background-size: 100% 100%;
@@ -105,7 +105,7 @@ export default{
 	}
 
 	.slide-second{	
-		height: 56em;
+		height: 56rem;
 		width: 100%;
 		background-image: url(./../../assets/3.jpg);
 		background-size: 100% 100%;
@@ -119,15 +119,15 @@ export default{
 
 	.content{
 		width:1170px;
-		padding:0 15px;
+		padding:0 1rem;
 		margin: 0 auto;
 		min-height: 100%;
 		text-align: center;
 		position: relative;
-		top:6px;
+		top:0.375rem;
 	}
 	.box{
-		height: 18em;
+		height: 18rem;
 		width: 100%;
 		position: absolute;
 		top:50% ;
@@ -135,25 +135,25 @@ export default{
 
 		h2{
 			font-family: "Roboto",Arial,sans-serif;
-	    	font-size: 70px;
+	    	font-size: 3.875rem;
 		    font-weight: 100;
-		    line-height: 87px;
+		    line-height: 5.5rem;
 		    color: #fff;
 		    z-index: 2;
-		    margin-bottom: 0.36em;
-    		letter-spacing: 8px;
+		    margin-bottom: 0.36rem;
+    		letter-spacing: 0.42rem;
 		}
 
 		p {
-			height: 3.6em;
-			margin-bottom: 0.6em;
+			height: 3.6rem;
+			margin-bottom: 0.6rem;
 			text-align: center;
 		}
 
 		a{
 			display: block;
-			height: 3em;
-			line-height: 3em;
+			height: 3rem;
+			line-height: 3rem;
 			width: 164px;
 			text-align: center;
 			font-size: 24px;
@@ -165,6 +165,21 @@ export default{
 			&:hover{
 				opacity: 0.8;
 			}
+		}
+	}
+
+	// 响应式布局
+	@media screen and (max-width:1170px){
+		.slider{
+			
+		}
+
+		.content{
+			width: 100%;
+		}
+
+		.box{
+			margin-left: -1rem;
 		}
 	}
 </style>

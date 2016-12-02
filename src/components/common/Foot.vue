@@ -1,7 +1,7 @@
 <template>
 	<footer>
 		<div>
-			<img src="./../../assets/icon.png">
+			<!-- <img src="./../../assets/icon.png"> -->
 			<p class="count">已有 {{vistorNumber}} 人次访问</p>
 			<p><small>© 2016 讯澜工作社. All Rights Reserved</small></p>
 			<p><small>Powered By <a href="http://suvllian.com">Suvllian</a></small></p>
@@ -13,33 +13,34 @@
 export default {
 	data(){
 		return{
-			vistorNumber:1000
+			vistorNumber:1024
 		}
 	}
 }
 </script>
 
 <style lang="scss" scoped>
+	$fontsize:1rem;
+
 	footer{
 		border-top: 1px solid #f0f2f3;
-    	padding: 40px 0;
+    	padding: 1rem 0;
     	background-color: rgba(21, 31, 44, 0.1);
     	height: auto;
-		min-width: 1170px;
 	}
 
 	div{
 		width: 1170px;
 		height: auto;
 		margin: 0 auto;
-		padding: 0 1em;
+		padding: 0 1rem;
 		text-align: center;
 	}
 
 	p{
 		color: #818892;
-		font-size: 1.125em;
-		padding:0.25em 0;
+		font-size: $fontsize;
+		padding:0.25rem 0;
 
 		a{
 			color: #69606b;
@@ -52,18 +53,44 @@ export default {
 	}
 
 	img{
-		width: 10em;
-		height: 10em;
+		width: 10rem;
+		height: 10rem;
 	}
 
 	small{
-		font-size: 1.125em;
+		font-size: $fontsize;
 	}
 
 	.count{
 		color: #69606b;
 		font-family: "Source Sans Light",sans-serif;
-    	font-size: 1.25em;
+    	font-size: $fontsize;
     	font-weight: 300;
+	}
+
+	// 响应式布局
+	@media screen and (max-width:1170px){
+		div{
+			width: 100%;
+		}
+	}
+
+	$fontsize600:0.8em;
+	@media screen and (max-width:600px){
+		footer{
+			padding:$fontsize600 0;
+		}
+
+		p{
+			font-size: $fontsize600;
+		}
+
+		small{
+			font-size: $fontsize600;
+		}
+
+		.count{
+	    	font-size: $fontsize600;
+		}
 	}
 </style>

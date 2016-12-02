@@ -41,29 +41,30 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+	$height:6rem;
+
 	header{
-		height: 96px;
+		height: $height;
 		width: 100%;
 		background: white none repeat scroll 0 0;
-    	box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.22);
+    	box-shadow: 0 0.25rem 0.25rem -0.25rem rgba(0, 0, 0, 0.22);
     	padding: 0;
 
 		position: relative;
 		top: 0;
 		left: 0;
 
-		min-width: 1170px;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 	    color: rgba(0, 0, 0, 0.7);
 	    font-weight: 400;
-	    margin: 0 0 30px;
+	    margin: 0 0 1.875rem;
 	}
 
 	.container{
 		width: 1170px;
-		height: 96px;
+		height: $height;
 		padding:0px 15px;
 		margin: 0 auto;
 	}
@@ -71,7 +72,7 @@ export default{
 	.nav-header{
 	    float: left;
 	    position: relative;
-		height: 96px;
+		height: $height;
 	    width: 100%;
 	}
 
@@ -80,7 +81,7 @@ export default{
 	    font-size: 22px;
 	    font-weight: 700;
 	    margin-bottom: 0;
-	    margin-top: 1em;
+	    margin-top: 1rem;
 	    padding-top: 15px;
 	    text-transform: uppercase;
 
@@ -109,26 +110,26 @@ export default{
 	    ul{
 		    color: #848484;
 		    font-family: "Open Sans",Arial,serif;
-		    font-size: 18px;
-		    height: 96px;
+		    height: $height;
 		    font-weight: 300;
-		    margin:0 1em 0 0;
+		    margin:0 1rem 0 0;
 
 		    li{
 				float: left;
-				height: 96px;
-			    padding-top: 15px;
+				height: $height;
+			    padding-top: 0.25rem;
 				position: relative;
 				list-style: none;
 				transition: 1s all ease;
 
 				a{
 					display: block;
+					height: 100%;
 					position: relative;
 				    color: rgba(0, 0, 0, 0.8);
-				    font-size: 14px;
+				    font-size: 0.875rem;
 				    font-weight: 400;
-				    padding: 2em 1.3em !important;
+				    padding: 2.125rem 1.3rem !important;
 				    text-decoration: none;
 				    text-transform: uppercase;
 					transition: 0.5s all ease;
@@ -142,6 +143,19 @@ export default{
 					}
 				}
 			}
+		}
+	}
+
+	// 响应式布局
+	@media screen and (max-width:1170px){
+		.container{
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width:600px){
+		nav{
+			display: none;
 		}
 	}
 </style>

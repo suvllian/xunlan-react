@@ -8,7 +8,7 @@
 	section{
 		height: 36em;
 		width: 100%;
-		min-width: 1170px;
+		// min-width: 1170px;
     	box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.22);
 		position: relative;
 
@@ -20,6 +20,13 @@
 			left:0;
 			background: url(./../../assets/fix-bg1.jpg) fixed 40% 100%;
 			opacity: 0.036;
+		}
+	}
+
+	// 响应式布局
+	@media screen and (max-width:1170px){
+		section{
+			width: 100%;
 		}
 	}
 </style>

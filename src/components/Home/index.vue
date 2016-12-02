@@ -1,13 +1,13 @@
 <template>
   <main-layout>
     <vote-image></vote-image>
-    <slider></slider>
+    <!-- <slider></slider>
     <block></block>
     <slogan></slogan>
     <achieve></achieve>
     <show-image></show-image>
     <link-block></link-block>
-    <connect></connect>
+    <connect></connect> -->
   </main-layout>
 </template>
 

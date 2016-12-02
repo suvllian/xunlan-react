@@ -8,25 +8,29 @@
 </template>
 
 <style lang="scss" scoped>
-	$iconsize:4em;
+	$iconsize:4rem;
 
 	@mixin common-insize{
 		width: 100%;
-		height: 24em;
-		min-width: 1170px;
-
+		height: 24rem;
 	}
+
 	section{
 		@include common-insize;
-		padding-top: 2.4em;
+		padding-top: 2.4rem;
 		background:  #fff;
+	}
+
+	div{
+		width: 1170px;
+		margin: 0 auto;
 	}
 
 	h2{
 		color: rgba(0, 0, 0, 0.7);
 		font-weight: 400;
-		margin: 0 0 30px;
-		font-size: 34px;
+		margin: 0 0 1.875rem;
+		font-size: 2rem;
 		text-align: center;
 	}
 
@@ -35,11 +39,18 @@
 		max-height: $iconsize;
 		position:relative;
 		display: block;
-		margin: 0 auto 16px;
+		margin: 0 auto 1rem;
 
 		img{
 			max-width: $iconsize;
 			max-height: $iconsize;
+		}
+	}
+
+	// 响应式布局
+	@media screen and (max-width:1170px){
+		div{
+			width: 100%;
 		}
 	}
 </style>
