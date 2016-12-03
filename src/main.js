@@ -6,11 +6,11 @@ import routes from './routes'
 
 Vue.use(VueResource);
 /* eslint-disable no-new */
-new Vue({
+var main = new Vue({
   el: '#app',
   template: '<App/>',
   components: { App }
 });
 
-//VueRouter.start(Vue.extend({}), '#app');
+VueRouter.start(main, '#app');
 

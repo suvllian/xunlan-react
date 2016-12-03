@@ -13,8 +13,23 @@
 export default {
 	data(){
 		return{
-			vistorNumber:1024
+			vistorNumber: Number
 		}
+	},
+	methods:{
+		getVisitCount:function(){
+			var url = "http://xunlan.chd.edu.cn/camera/v/visitCount.php";
+	        var xhr = new XMLHttpRequest();
+	        xhr.open('GET',url);
+	        var that = this;
+	        xhr.onload = function(e){
+	        	that.vistorNumber = this.response;
+	        }
+	        xhr.send();
+		}
+	},
+	created(){
+		this.getVisitCount();
 	}
 }
 </script>

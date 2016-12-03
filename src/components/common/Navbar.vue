@@ -28,7 +28,7 @@ export default{
 			liItems:[
 				{title:"首页",src:'/'},
 				{title:"摄影大赛",src:'/camera'},
-				{title:"专题展示",src:''},
+				{title:"专题展示",src:'/404'},
 				{title:"新闻周刊",src:''},
 				{title:"关于我们",src:''}
 			]

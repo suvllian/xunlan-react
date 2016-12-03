@@ -10,13 +10,13 @@
 			</div>
 			<div class="box-common">
 				<span>票数({{single.iCountVotes}})</span>
-				<span @click="toVote(key)">
+				<span @click="toVote(key,single.iId)">
 					<img  v-if="single.isVote" src="./../../assets/after.png">
 					<img  v-else src="./../../assets/before.png">
 				</span>
 			</div>
 		</div>
-		<h1 @click="addData()">查看更多</h1>
+		<h1 @click="addData()">{{bottomTitle}}</h1>
 	</section>
 </template>
 
@@ -25,22 +25,24 @@ export default{
 	data(){
 		return{
 			data:[],
-			counter:1
+			pageCounter:1,
+			bottomTitle:"查看更多"
 		}
 	},
 	methods:{
 		toBig:function(index){
-			console.log(this.$root.test);
 			this.data[index].isActive = !this.data[index].isActive;
 		},
-		toVote:function(index){
+		toVote:function(index,id){
 			this.data[index].isVote = !this.data[index].isVote;
 			if(this.data[index].isVote){
 				this.data[index].iCountVotes++;
 
+				this.changeVote(id,"add");
 			}else{
 				this.data[index].iCountVotes--;
 
+				this.changeVote(id,"sub");
 			}
 		},
 		getData:function(page){
@@ -60,19 +62,32 @@ export default{
 	        xhr.send();
 		},
 		addData:function(){
-			this.counter++;
+			this.pageCounter++;
 			var url = "http://xunlan.chd.edu.cn/camera/v/data.php?page=";
-			url = url + this.counter;
+			url = url + this.pageCounter;
 	        var xhr = new XMLHttpRequest();
 	        xhr.open('GET',url);
 	        var that = this;
 	        xhr.onload = function(e){
-	        	var data = JSON.parse(this.response);
-	        	for(let i=0;i<data.length;i++){
-	        		data[i].isActive = false;
-	        		data[i].isVote = false;
-	        	}	
-	        	that.data = that.data.concat(data);
+	        		var data = JSON.parse(this.response);
+		        	for(let i=0;i<data.length;i++){
+		        		data[i].isActive = false;
+		        		data[i].isVote = false;
+		        	}	
+		        	that.data = that.data.concat(data);
+		        	var responseLength = data.length;
+		        	if(responseLength===0){
+			        	that.bottomTitle = "没有更多内容了";
+			        }
+	        }
+	        xhr.send();
+		},
+		changeVote:function(id,way){
+			var url = "http://xunlan.chd.edu.cn/camera/v/votedeal.php?way="+way+"&id=" + id;
+	        var xhr = new XMLHttpRequest();
+	        xhr.open('GET',url);
+	        xhr.onload = function(e){
+	        
 	        }
 	        xhr.send();
 		}
@@ -148,6 +163,7 @@ export default{
 			height: 3em;
 			width: 100%;
 			padding-top:0.5em;
+			clear: left;
 
 			span{
 				margin-left: 1em;
@@ -186,6 +202,7 @@ export default{
 		.border{
 			border-left:4px solid #dfdfdf;
 			padding-left:1em;
+			text-indent: 2em;
 		}
 	}
 

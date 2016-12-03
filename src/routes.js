@@ -5,7 +5,7 @@ export default function (router) {
       component: require('./components/Home/index.vue')
     },
     '/camera': {
-      name: 'login',
+      name: 'camera',
       component: require('./components/camera/index.vue')
     },
     '*': {
