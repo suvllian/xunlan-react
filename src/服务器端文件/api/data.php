@@ -1,5 +1,4 @@
 <?php
-
 require_once("./../myfun/db.class.php");  
 
 header('Access-Control-Allow-Origin:*');   
@@ -9,17 +8,20 @@ header('Content-Type:application/json');
 
 $cookieName = md5("xunlan");
 $cookieContent = md5("allow");
-
-$page = $_GET['page']-0;
-
-
 if (empty($_COOKIE[$cookieName])) {
     setCookie($cookieName,$cookieContent,time()+86400);
 }
 
-$pageNumber = ($page-1)*16;
-$sql = "select * from image_info limit ".$pageNumber.",16";
-$result = $db->fetchAll($sql);
-echo json_encode($result);
+$page = $_GET['page']-0;
+
+if($page>1){
+	$pageNumber = ($page-1)*16;
+	$sql = "select * from image_info limit ".$pageNumber.",16";
+	$result = $db->fetchAll($sql);
+	echo json_encode($result);
+}
+
+
+
 
 

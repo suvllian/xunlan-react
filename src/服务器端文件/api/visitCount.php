@@ -1,7 +1,5 @@
 <?php
 require_once("./../myfun/db.class.php"); 
-header('Access-Control-Allow-Origin:*');   
-header('Access-Control-Allow-Headers:x-requested-with,content-type');  
 
 $sql = "update visit_count set count = count+1";
 $result = $db->query($sql);

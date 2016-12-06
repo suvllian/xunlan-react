@@ -8,6 +8,7 @@
 						<li v-for="item in liItems">
 							<a v-bind:href="item.src">{{item.title}}</a>
 						</li >
+						<input type="text" v-model="serach" placeholder="输入作品名搜索">
 					</ul>
 				</nav>
 			</div>
@@ -16,22 +17,22 @@
 </template>
 
 <script>
-import routes from './../../routes'
 
 export default{
 	data(){
 		return{
 			logo:{
 				title:"xunlan",
-				src:"http://suvllian.com"
+				src:"http://xunlan.chd.edu.cn"
 			},
 			liItems:[
 				{title:"首页",src:'/'},
-				{title:"摄影大赛",src:'/camera'},
-				{title:"专题展示",src:'/404'},
+				{title:"摄影大赛",src:'/'},
+				{title:"专题展示",src:'/'},
 				{title:"新闻周刊",src:''},
 				{title:"关于我们",src:''}
-			]
+			],
+			serach:""
 		}
 	},
 	methods:{
@@ -114,6 +115,19 @@ export default{
 		    font-weight: 300;
 		    margin:0 1rem 0 0;
 
+		    input{
+		    	font-size: 22px;
+		    	letter-spacing: 1px;
+
+		    	margin-top: 1.6rem;
+		    	margin-left: 16px;
+		    	height: 2.4rem;
+		    	width: 196px;
+		    	border:0;
+		    	border-bottom:1px solid #aaa;
+		    	padding:0.06rem 0.54rem;
+		    }
+
 		    li{
 				float: left;
 				height: $height;
@@ -153,9 +167,17 @@ export default{
 		}
 	}
 
-	@media screen and (max-width:600px){
-		nav{
+	@media screen and (max-width:800px){
+		li{
 			display: none;
+		}
+
+		input{
+			width: 10px;
+		}
+
+		header{
+			min-width: 380px;
 		}
 	}
 </style>

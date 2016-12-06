@@ -18,7 +18,7 @@ export default {
 	},
 	methods:{
 		getVisitCount:function(){
-			var url = "http://xunlan.chd.edu.cn/camera/v/api/visitCount.php";
+			var url = "http://xunlan.chd.edu.cn/camera/v/api/visitcount.php";
 	        var xhr = new XMLHttpRequest();
 	        xhr.open('GET',url);
 	        var that = this;

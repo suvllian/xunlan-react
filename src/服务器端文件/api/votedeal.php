@@ -34,10 +34,12 @@ if (empty($_COOKIE[$cookieName])) {
 		$ticketNumber = 0;
 	}else{
 		$cookieNumber = $_COOKIE[$tickets];	
-		$ticketNumber = substr($cookieNumber, strpos($cookieNumber,".")+1, 1);
+
+		// 票数大于10时，应截断两位
+		$ticketNumber = substr($cookieNumber, strpos($cookieNumber,".")+1, 2);
 
 		// 将该用户投票数与最大限制投票数进行比较。字符串进行比较
-		if($ticketNumber >= $maxTickets){
+		if($ticketNumber >= $maxTickets || $ticketNumber < "0"){
 
 			// 超出投票数量限制
 			echo 11;
