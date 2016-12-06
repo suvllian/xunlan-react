@@ -1,5 +1,5 @@
 <?php
-require_once("./db.class.php");  
+require_once("./../myfun/db.class.php"); 
 header('Access-Control-Allow-Origin:*');   
 header('Access-Control-Allow-Headers:x-requested-with,content-type');  
 

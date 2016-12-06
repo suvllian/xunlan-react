@@ -2,7 +2,7 @@
 	<footer>
 		<div>
 			<!-- <img src="./../../assets/icon.png"> -->
-			<p class="count">已有 {{vistorNumber}} 人次访问</p>
+			<p class="count" v-cloak>已有 {{vistorNumber}} 人次访问</p>
 			<p><small>© 2016 讯澜工作社. All Rights Reserved</small></p>
 			<p><small>Powered By <a href="http://suvllian.com">Suvllian</a></small></p>
 		</div>
@@ -18,7 +18,7 @@ export default {
 	},
 	methods:{
 		getVisitCount:function(){
-			var url = "http://xunlan.chd.edu.cn/camera/v/visitCount.php";
+			var url = "http://xunlan.chd.edu.cn/camera/v/api/visitCount.php";
 	        var xhr = new XMLHttpRequest();
 	        xhr.open('GET',url);
 	        var that = this;
@@ -81,6 +81,10 @@ export default {
 		font-family: "Source Sans Light",sans-serif;
     	font-size: $fontsize;
     	font-weight: 300;
+	}
+
+	[v-cloak]{
+		display:none;
 	}
 
 	// 响应式布局

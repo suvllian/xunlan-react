@@ -46,12 +46,17 @@ export default{
 			}
 		},
 		getData:function(page){
-			var url = "http://xunlan.chd.edu.cn/camera/v/data.php?page=";
+			var url = "http://xunlan.chd.edu.cn/camera/v/api/data.php?page=";
 			url = url + page;
 	        var xhr = new XMLHttpRequest();
 	        xhr.open('GET',url);
 	        var that = this;
 	        xhr.onload = function(e){
+	        	var responseLength = this.response.length;
+	        	if(responseLength===0){
+		        	that.bottomTitle = "暂无内容";
+		        	return;
+		        }
 	        	var data = JSON.parse(this.response);
 	        	for(let i=0;i<data.length;i++){
 	        		data[i].isActive = false;
@@ -63,31 +68,31 @@ export default{
 		},
 		addData:function(){
 			this.pageCounter++;
-			var url = "http://xunlan.chd.edu.cn/camera/v/data.php?page=";
+			var url = "http://xunlan.chd.edu.cn/camera/v/api/data.php?page=";
 			url = url + this.pageCounter;
 	        var xhr = new XMLHttpRequest();
 	        xhr.open('GET',url);
 	        var that = this;
 	        xhr.onload = function(e){
-	        		var data = JSON.parse(this.response);
-		        	for(let i=0;i<data.length;i++){
-		        		data[i].isActive = false;
-		        		data[i].isVote = false;
-		        	}	
-		        	that.data = that.data.concat(data);
-		        	var responseLength = data.length;
-		        	if(responseLength===0){
-			        	that.bottomTitle = "没有更多内容了";
-			        }
+        		var data = JSON.parse(this.response);
+	        	for(let i=0;i<data.length;i++){
+	        		data[i].isActive = false;
+	        		data[i].isVote = false;
+	        	}	
+	        	that.data = that.data.concat(data);
+	        	var responseLength = data.length;
+	        	if(responseLength===0){
+		        	that.bottomTitle = "没有更多内容了";
+		        }
 	        }
 	        xhr.send();
 		},
 		changeVote:function(id,way){
-			var url = "http://xunlan.chd.edu.cn/camera/v/votedeal.php?way="+way+"&id=" + id;
+			var url = "http://xunlan.chd.edu.cn/camera/v/api/votedeal.php?way="+way+"&id=" + id;
 	        var xhr = new XMLHttpRequest();
 	        xhr.open('GET',url);
 	        xhr.onload = function(e){
-	        
+
 	        }
 	        xhr.send();
 		}
@@ -202,7 +207,6 @@ export default{
 		.border{
 			border-left:4px solid #dfdfdf;
 			padding-left:1em;
-			text-indent: 2em;
 		}
 	}
 
