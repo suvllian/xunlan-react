@@ -12,16 +12,25 @@ if (empty($_COOKIE[$cookieName])) {
     setCookie($cookieName,$cookieContent,time()+86400);
 }
 
-$page = $_GET['page']-0;
+if(!empty($_GET['page'])){
 
-if($page>1){
+	$page = $_GET['page']-0;
 	$pageNumber = ($page-1)*16;
 	$sql = "select * from image_info limit ".$pageNumber.",16";
 	$result = $db->fetchAll($sql);
+
+	// 返回JSON格式的数据
 	echo json_encode($result);
 }
 
+if(!empty($_GET['info'])){
 
+	// 进行转义
+	$serach = addslashes($_GET['info']);
+	$sql = "select * from image_info where iTopic='$serach'";
+	$result = $db->fetchAll($sql);
 
-
+	// 返回JSON格式的数据
+	echo json_encode($result);
+}
 

@@ -3,12 +3,15 @@
 		<div class="container">
 			<div class="nav-header">
 				<h1 id="logo"><a v-bind:href="logo.src">{{logo.title}}</a></h1>
+
+				<input type="text" name="small" v-model="serach" placeholder="搜索">
+
 				<nav>
 					<ul>
 						<li v-for="item in liItems">
 							<a v-bind:href="item.src">{{item.title}}</a>
 						</li >
-						<input type="text" v-model="serach" placeholder="输入作品名搜索">
+						<input type="text" v-model="serach" placeholder="输入作品名搜索" @keyup.enter="serachData">
 					</ul>
 				</nav>
 			</div>
@@ -36,7 +39,26 @@ export default{
 		}
 	},
 	methods:{
-		
+		serachData:function(){
+			var url = "http://xunlan.chd.edu.cn/camera/v/api/data.php?info=";
+			url = url + this.serach;
+	        var xhr = new XMLHttpRequest();
+	        xhr.open('GET',url);
+	        var that = this.$parent.$children[0];
+	        xhr.onload = function(e){
+	        	var data = JSON.parse(this.response);
+	        	for(let i=0;i<data.length;i++){
+	        		data[i].isActive = false;
+	        		data[i].isVote = false;
+	        	}	
+	        	that.data = data;
+	        	var responseLength = data.length;
+	        	if(responseLength===0){
+		        	that.bottomTitle = "没有你要搜索的内容";
+		        }
+	        }
+	        xhr.send();
+		}
 	}
 }
 </script>
@@ -102,11 +124,30 @@ export default{
 		}
 	}
 
+	input{
+    	font-size: 22px;
+    	letter-spacing: 1px;
+
+    	margin-top: 1.6rem;
+    	margin-left: 16px;
+    	height: 2.4rem;
+    	width: 180px;
+    	border:0;
+    	border-bottom:1px solid #aaa;
+    	padding:0.06rem 0.54rem;
+    }
+
+    input[name=small]{
+    	display: none;
+    }
+
 	nav{
 	    display: block;
 	    float: right;
 	    position: relative;
 	    z-index: 2;
+
+
 
 	    ul{
 		    color: #848484;
@@ -114,19 +155,6 @@ export default{
 		    height: $height;
 		    font-weight: 300;
 		    margin:0 1rem 0 0;
-
-		    input{
-		    	font-size: 22px;
-		    	letter-spacing: 1px;
-
-		    	margin-top: 1.6rem;
-		    	margin-left: 16px;
-		    	height: 2.4rem;
-		    	width: 196px;
-		    	border:0;
-		    	border-bottom:1px solid #aaa;
-		    	padding:0.06rem 0.54rem;
-		    }
 
 		    li{
 				float: left;
@@ -172,13 +200,22 @@ export default{
 			display: none;
 		}
 
-		input{
-			width: 10px;
+		nav{
+			width: 136px;
+			margin-left: -24px;
+			overflow: hidden;
+
+			input{
+				display: none;
+			}
 		}
 
-		header{
-			min-width: 380px;
-		}
+		input[name=small]{
+	    	width: 136px;
+			margin-top: 1.3rem;
+			display: inline-block;
+			margin-left: 28px;
+	    }
 	}
 </style>
 
