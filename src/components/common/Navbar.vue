@@ -4,14 +4,11 @@
 			<div class="nav-header">
 				<h1 id="logo"><a v-bind:href="logo.src">{{logo.title}}</a></h1>
 
-				<input type="text" name="small" v-model="serach" placeholder="搜索">
-
 				<nav>
 					<ul>
 						<li v-for="item in liItems">
 							<a v-bind:href="item.src">{{item.title}}</a>
 						</li >
-						<input type="text" v-model="serach" placeholder="输入作品名搜索" @keyup.enter="serachData">
 					</ul>
 				</nav>
 			</div>
@@ -34,31 +31,11 @@ export default{
 				{title:"专题展示",src:'/'},
 				{title:"新闻周刊",src:''},
 				{title:"关于我们",src:''}
-			],
-			serach:""
+			]
 		}
 	},
 	methods:{
-		serachData:function(){
-			var url = "http://xunlan.chd.edu.cn/camera/v/api/data.php?info=";
-			url = url + this.serach;
-	        var xhr = new XMLHttpRequest();
-	        xhr.open('GET',url);
-	        var that = this.$parent.$children[0];
-	        xhr.onload = function(e){
-	        	var data = JSON.parse(this.response);
-	        	for(let i=0;i<data.length;i++){
-	        		data[i].isActive = false;
-	        		data[i].isVote = false;
-	        	}	
-	        	that.data = data;
-	        	var responseLength = data.length;
-	        	if(responseLength===0){
-		        	that.bottomTitle = "没有你要搜索的内容";
-		        }
-	        }
-	        xhr.send();
-		}
+	
 	}
 }
 </script>

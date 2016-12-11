@@ -1,5 +1,8 @@
 <template>
 	<section>
+
+		<input type="text" v-model="serach" placeholder="输入作品名搜索" @keyup.enter="serachData">
+
 		<div class="box" v-for="(single,key) in data">
 			<div class="box-content">
 				<img :class="{active:single.isActive}" v-bind:src="'http://xunlan.chd.edu.cn/camera/v/works/'+single.iId+'.jpg'" v-on:click="enlargeImage(key)" alt="">
@@ -26,13 +29,16 @@ export default{
 		return{
 			data:[],
 			pageCounter:1,
-			bottomTitle:"查看更多"
+			bottomTitle:"查看更多",
+			serach:""
 		}
 	},
+
 	methods:{
 		enlargeImage:function(index){
 			this.data[index].isActive = !this.data[index].isActive;
 		},
+
 		dealVote:function(index,id){
 			this.data[index].isVote = !this.data[index].isVote;
 			if(this.data[index].isVote){
@@ -43,13 +49,14 @@ export default{
 				this.changeVote(id,"sub");
 			}
 		},
+
 		getData:function(){
 			var url = "http://xunlan.chd.edu.cn/camera/v/api/data.php?page=1";
 	        var xhr = new XMLHttpRequest();
 	        xhr.open('GET',url);
 	        var that = this;
 	        xhr.onload = function(e){
-        		var responseLength = this.response.length;
+	    		var responseLength = this.response.length;
 	        	if(responseLength===0){
 		        	that.bottomTitle = "暂无内容";
 		        	return;
@@ -64,6 +71,7 @@ export default{
 	        }
 	        xhr.send();
 		},
+
 		addData:function(){
 			this.pageCounter++;
 			var url = "http://xunlan.chd.edu.cn/camera/v/api/data.php?page=";
@@ -72,7 +80,7 @@ export default{
 	        xhr.open('GET',url);
 	        var that = this;
 	        xhr.onload = function(e){
-        		var data = JSON.parse(this.response);
+	    		var data = JSON.parse(this.response);
 	        	for(let i=0;i<data.length;i++){
 	        		data[i].isActive = false;
 	        		data[i].isVote = false;
@@ -85,6 +93,28 @@ export default{
 	        }
 	        xhr.send();
 		},
+
+		serachData:function(){
+			var url = "http://xunlan.chd.edu.cn/camera/v/api/data.php?info=";
+			url = url + this.serach;
+	        var xhr = new XMLHttpRequest();
+	        xhr.open('GET',url);
+	        var that = this;
+	        xhr.onload = function(e){
+	        	var data = JSON.parse(this.response);
+	        	for(let i=0;i<data.length;i++){
+	        		data[i].isActive = false;
+	        		data[i].isVote = false;
+	        	}	
+	        	that.data = data;
+	        	var responseLength = data.length;
+	        	if(responseLength===0){
+		        	that.bottomTitle = "没有你要搜索的内容";
+		        }
+	        }
+	        xhr.send();
+		},
+
 		changeVote:function(id,way){
 			var url = "http://xunlan.chd.edu.cn/camera/v/api/votedeal.php";
 			var postData = "way="+way+"&id="+id;
@@ -98,12 +128,17 @@ export default{
 	        xhr.send(postData);
 		}
 	},
+
 	created(){
 		this.getData();
     }
 }
 </script>
 <style lang="scss" scoped>
+	/*搜索框*/
+	
+ 
+	/*搜索框*/
 	section{
 		height: auto;
 		width: 100%;
@@ -122,6 +157,23 @@ export default{
 			&:hover{
 				color: #333;
 			}
+		}
+
+		input{
+			width: 100%;
+			max-width: 56em;
+			margin: 0 auto;
+			position:relative;
+			margin-left: 50%;
+			margin-top: -1em;
+			left: -28em;
+
+			height: auto;
+			border:0;
+			padding:1.2em;
+			border-bottom:1px dotted #333;
+			background-color:#eee;
+			box-shadow:1px 1px 5px #aaa;
 		}
 	}
 
@@ -218,6 +270,16 @@ export default{
 			max-width: 96%;
 			margin: 1em 2%;
 		}
+
+		section{
+			input{
+				position:relative;
+				width: 100%;
+
+				margin-left: 0;
+				left:0;
+			}
+		}	
 	}
 
 	@media screen and (max-width:510px){
