@@ -7,7 +7,7 @@
 				<nav>
 					<ul>
 						<li v-for="item in liItems">
-							<a v-bind:href="item.src">{{item.title}}</a>
+							<router-link v-bind:to="item.src">{{item.title}}</router-link>
 						</li >
 					</ul>
 				</nav>
@@ -23,14 +23,14 @@ export default{
 		return{
 			logo:{
 				title:"xunlan",
-				src:"http://xunlan.chd.edu.cn"
+				src:"http://suvllian.com"
 			},
 			liItems:[
 				{title:"首页",src:'/'},
-				{title:"摄影大赛",src:'/'},
-				{title:"专题展示",src:'/'},
-				{title:"新闻周刊",src:''},
-				{title:"关于我们",src:''}
+				{title:"摄影大赛",src:'/camera'},
+				{title:"专题展示",src:'/html'},
+				{title:"新闻周刊",src:'/news'},
+				{title:"关于我们",src:'/about'}
 			]
 		}
 	},
@@ -90,6 +90,7 @@ export default{
 		    color: rgba(21, 31, 44, 0.8);
 		    padding: 0 7px;
 		    position: relative;
+
 
 		    &:hover{
 		    	color: rgba(0, 0,0 , 0.9);
@@ -152,6 +153,7 @@ export default{
 				    text-decoration: none;
 				    text-transform: uppercase;
 					transition: 0.5s all ease;
+					cursor:pointer;
 				}
 
 				&:hover{

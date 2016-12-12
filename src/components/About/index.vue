@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h2>你要找的页面不存在</h2>
+		<h2>关于我们</h2>
 	</section>
 </template>
 
