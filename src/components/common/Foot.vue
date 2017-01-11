@@ -1,7 +1,6 @@
 <template>
 	<footer>
 		<div>
-			<!-- <img src="./../../assets/icon.png"> -->
 			<p class="count" v-cloak>已有 {{vistorNumber}} 人次访问</p>
 			<p><small>© 2016 讯澜工作社. All Rights Reserved</small></p>
 			<p><small>Powered By <a href="http://suvllian.com">Suvllian</a></small></p>
@@ -13,7 +12,7 @@
 export default {
 	data(){
 		return{
-			vistorNumber: Number
+			vistorNumber: 1
 		}
 	},
 	methods:{
@@ -29,19 +28,20 @@ export default {
 		}
 	},
 	created(){
-		this.getVisitCount();
+		// this.getVisitCount();
 	}
 }
 </script>
 
 <style lang="scss" scoped>
-	$fontsize:1rem;
+	$fontsize:0.8rem;
 
 	footer{
 		border-top: 1px solid #f0f2f3;
-    	padding: 1rem 0;
+    	padding: 0.66rem 0;
     	background-color: rgba(21, 31, 44, 0.1);
     	height: auto;
+    	clear: both;
 	}
 
 	div{
@@ -56,6 +56,7 @@ export default {
 		color: #818892;
 		font-size: $fontsize;
 		padding:0.25rem 0;
+		line-height: 1em;
 
 		a{
 			color: #69606b;
@@ -79,7 +80,6 @@ export default {
 	.count{
 		color: #69606b;
 		font-family: "Source Sans Light",sans-serif;
-    	font-size: $fontsize;
     	font-weight: 300;
 	}
 
@@ -102,6 +102,8 @@ export default {
 
 		p{
 			font-size: $fontsize600;
+			line-height:0.8em;
+			padding:0.125rem 0;
 		}
 
 		small{
@@ -109,7 +111,7 @@ export default {
 		}
 
 		.count{
-	    	font-size: $fontsize600;
+	    	font-size: 0.66em;
 		}
 	}
 </style>

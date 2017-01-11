@@ -26,7 +26,7 @@ const router = new VueRouter({
     { path: '/html', component: Html },
     { path: '/news', component: News },
     { path: '/about', component: About },
-    { path: '/*', component: Not },
+    { path: '/*', component: Main },
   ]
 })
 

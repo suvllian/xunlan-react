@@ -67,6 +67,9 @@ export default{
 	        		data[i].isVote = false;
 	        	}	
 	        	that.data = data;
+	        	console.log(that.data);
+	        	console.log(typeof that.data);
+	        	console.log(typeof that.data[0]);
 	        }
 	        xhr.send();
 		},
@@ -134,10 +137,6 @@ export default{
 }
 </script>
 <style lang="scss" scoped>
-	/*搜索框*/
-	
- 
-	/*搜索框*/
 	section{
 		height: auto;
 		width: 100%;

@@ -18,3 +18,12 @@ export default {
 }
 </script>
 
+
+<style>
+	*{
+		padding:0;
+		margin: 0;
+		text-decoration: none;
+    box-sizing: border-box;;
+	}
+</style>
