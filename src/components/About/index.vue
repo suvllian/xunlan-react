@@ -172,10 +172,6 @@ export default{
 				this.contentItem[i].isActive = false;
 			}
 		}
-	},
-
-	beforeUpdate(){
-		
 	}
 }
 </script>

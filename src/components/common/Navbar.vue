@@ -183,7 +183,7 @@ export default{
 				a{
 					display: block;
 					position: relative;   
-				    padding: 1.725rem 1.3rem;
+				    padding: 1.92rem 1.3rem;
 				    text-decoration: none;
 				    text-transform: uppercase;
 					outline: none;

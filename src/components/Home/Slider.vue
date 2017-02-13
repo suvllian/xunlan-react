@@ -84,6 +84,7 @@ export default{
 		position: relative;
 		left: 0;
 		top:6px;
+		clear: both;
 	}
 
 	.container{

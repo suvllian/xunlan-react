@@ -19,6 +19,7 @@
 		@include common-insize;
 		padding-top: 2.4rem;
 		background:  #fff;
+		clear: both;
 	}
 
 	div{

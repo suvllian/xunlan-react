@@ -56,7 +56,6 @@ export default {
 		color: #818892;
 		font-size: $fontsize;
 		padding:0.25rem 0;
-		line-height: 1em;
 
 		a{
 			color: #69606b;
