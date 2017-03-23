@@ -1,0 +1,77 @@
+.col-md-6{
+	width: 50%;
+	float: left;
+
+	input{
+		width: 90%;
+	}
+
+	&:nth-child(2){
+		input{
+			width: 100%;
+		}
+	}
+}
+
+.col-md-12{
+	width: 100%;
+	position:relative;
+	float: left;
+
+	textarea{
+		width: 100%;
+		height: 220px;
+	}
+}
+
+.h3{
+	color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    padding: 0 0 20px;
+    font-size: 24px;
+}
+
+
+.left,.right{
+	width: 50%;
+	padding:0 15px;
+}
+
+.left{
+	float: left;
+
+	.form-control{
+		margin-bottom: 30px;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+	    border-radius: 1px;
+	    font-size: 18px;
+	    color: #555555;
+	    line-height: 1.42857;
+	    padding: 8px 16px;
+	    transition: all 0.15s ease 0s;
+
+	    &:focus, &:active{
+	    	border-bottom:1px dotted #00adb5;
+	    }
+	}
+}
+
+.right{
+	float: right;
+
+	// 字体共同样式
+	.p{
+		color: #848484;
+	    font-family: "Open Sans",Arial,serif;
+	    font-size: 18px;
+	    font-weight: 300;
+	    margin-bottom: 18px;
+	    line-height: 1.8;
+	}
+
+	.item{
+		list-style: none;
+	    letter-spacing: 1px;
+	    @extend .p;
+	}
+}

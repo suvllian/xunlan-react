@@ -1,0 +1,21 @@
+.slider{
+	width: 100%;
+	background-image: url("https://img.alicdn.com/tps/TB15XU_LpXXXXbEXpXXXXXXXXXX-900-500.png");
+	background-size:cover;
+
+	img{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.welcome-h{
+	color: #fff;
+    font-family: "Roboto",Arial,sans-serif;
+    font-size: 3.875rem;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 0.42rem;
+    line-height: 5.5rem;
+}

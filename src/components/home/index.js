@@ -1,6 +1,8 @@
 import React from 'react';
 import Nav from './nav.js';
-
+import Top from './top.js';
+import Connect from './connect.js';
+import Footer from './footer.js';
 
 export default class App extends React.Component{
 	constructor(props) {
@@ -10,8 +12,10 @@ export default class App extends React.Component{
 	render() {
 		return (
 			<div>
-				<Nav></Nav>
-
+				<Nav />
+				<Top />
+				<Connect />
+				<Footer />
 			</div>
 		)
 	}
