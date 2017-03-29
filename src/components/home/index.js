@@ -1,10 +1,10 @@
 import React from 'react';
-import Nav from './nav.js';
 import Top from './top.js';
+import News from './news.js';
 import Connect from './connect.js';
-import Footer from './footer.js';
+import Friend from './friend.js';
 
-export default class App extends React.Component{
+export default class Home extends React.Component{
 	constructor(props) {
 		super(props);
 	}
@@ -12,10 +12,10 @@ export default class App extends React.Component{
 	render() {
 		return (
 			<div>
-				<Nav />
 				<Top />
+				<News />
 				<Connect />
-				<Footer />
+				<Friend />
 			</div>
 		)
 	}

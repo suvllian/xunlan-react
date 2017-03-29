@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default class Nav extends React.Component {
 	constructor(props) {
@@ -7,7 +8,8 @@ export default class Nav extends React.Component {
 		this.state = {
 			liItems:[
 				{title:"首页",src:'/',isActive:true},
-				{title:"新闻周刊",src:'/news',isActive:false},
+				{title:"新闻部",src:'/news',isActive:false},
+				{title:"技术部",src:'/technology',isActive:false},
 				{title:"了解讯澜",src:'/about',isActive:false},
 				{title:"加入讯澜",src:'/about',isActive:false},
 			]
@@ -22,13 +24,11 @@ export default class Nav extends React.Component {
 						<h1 className="logo"><a href="">XUNLAN</a></h1>
 						<nav className="nav">
 							<ul className="nav-ul">
-								{
-									this.state.liItems.map((item, index) => 
-										<li className={item.isActive ? 'active': ''}>
-											<a>{item.title}</a>
-										</li>
-									)
-								}
+								<li className='active'>
+									<Link to="/">首页</Link>
+									<Link to="/home">首页</Link>
+									<Link to="/news">首页</Link>
+								</li>						
 							</ul>
 						</nav>
 					</div>

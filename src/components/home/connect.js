@@ -14,10 +14,11 @@ export default class Connect extends React.Component {
 			<section className="connect">	
 				<div className="container">
 					<div className="section-inner">
-						<h2 className="section-h"><span>联系我们</span></h2>
+						<div className="section-header">	
+							<h2 className="welcome-h">联系我们</h2>
+						</div>
 						<form>
 							<div className="right">
-								<h3 className="h3">联系地址</h3>
 								<p className="p">Get in touch with us. Feel Free to use contact below. </p>
 								<ul>
 									<li className="item">
