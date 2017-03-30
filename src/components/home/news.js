@@ -1,15 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import SectionHeader from './section-header.js';
+import './../../style/news.scss';
 
-export default class Footer extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			
-		}
-	}
-
+export default class Footer extends Component {
 	render() {
 		return (
 			<section className="news">

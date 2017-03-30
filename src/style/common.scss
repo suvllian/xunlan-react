@@ -19,15 +19,6 @@ a{
 	text-decoration:none;
 }
 
-.section-h{
-	color: rgba(0, 0, 0, 0.7);
-	font-weight: 500;
-	padding: 0 0 30px;
-	font-size: 30px;
-	text-align: center;
-	letter-spacing: 2px;
-}
-
 .container{
 	width:1170px;
 	height:100%;
@@ -61,22 +52,64 @@ a{
     }
 }
 
-.section-header{
-	text-align: center;
-	width: 50%;
-	margin: 0 auto;
+/* 标题类型一 */
+.section-title-1{
+	width: 100%;
+	margin-bottom: 5em;
 
 	h2 {
-		color: #484c50;
-	    font-size: 50px;
-	    font-weight: 300;
-	    margin-bottom: 10px;
+		font-weight: 300;
+		font-size: 42px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
 	}
 
 	p {
 		font-size: 18px;
 	    font-weight: 300;
 	    line-height: 32px;
-	    margin-bottom: 1.5em;
 	}
+}
+
+/* 标题类型二 */
+.section-title-2 {
+	width: 100%;
+	margin-bottom: 5em;
+
+	h2{
+		font-size: 24px;
+		font-weight: 400;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+}
+
+/* 文本居中 */
+.text-center {
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: rgba(0, 0, 0, 0.7);
+	margin: 0 0 30px;
+	line-height: 1.1;
+}
+
+.row::after{
+	clear: both;
+	content: " ";
+    display: table;
+}
+
+.col-md-3 {
+	width: 25%;
+	float: left;
+	position: relative;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	border: 0 none;
+	vertical-align: middle;
 }

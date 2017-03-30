@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
+import './../../style/connect.scss';
 
-export default class Connect extends React.Component {
+export default class Connect extends Component {
 	constructor(props) {
 		super(props);
 
@@ -14,8 +15,8 @@ export default class Connect extends React.Component {
 			<section className="connect">	
 				<div className="container">
 					<div className="section-inner">
-						<div className="section-header">	
-							<h2 className="welcome-h">联系我们</h2>
+						<div className="section-title-1 text-center">	
+							<h2>联系我们</h2>
 						</div>
 						<form>
 							<div className="right">

@@ -1,7 +1,8 @@
 .slider{
 	width: 100%;
-	background-image: url("https://img.alicdn.com/tps/TB15XU_LpXXXXbEXpXXXXXXXXXX-900-500.png");
-	background-size:cover;
+	background-image: url("/static/home-1.jpg");
+	background-size:100% 100%;
+	filter: brightness(0.66);
 
 	img{
 		display: block;

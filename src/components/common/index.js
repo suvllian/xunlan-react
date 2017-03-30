@@ -1,18 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Nav from './nav.js';
 import Footer from './footer.js';
-import { Link } from 'react-router';
+import './../../style/common.scss';
 
-export default class App extends React.Component{
-	constructor(props) {
-		super(props);
-	}
-
+export default class App extends Component{
 	render() {
 		return (
 			<div>
 				<Nav />
-					{this.props.children}
+				{this.props.children}
 				<Footer />
 			</div>
 		)

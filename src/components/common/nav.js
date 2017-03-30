@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router';
+import './../../style/nav.scss';
 
-export default class Nav extends React.Component {
+export default class Nav extends Component {
 	constructor(props) {
 		super(props);
 		
@@ -26,8 +27,9 @@ export default class Nav extends React.Component {
 							<ul className="nav-ul">
 								<li className='active'>
 									<Link to="/">首页</Link>
-									<Link to="/home">首页</Link>
-									<Link to="/news">首页</Link>
+								</li>
+								<li>
+									<Link to="/news">新闻</Link>
 								</li>						
 							</ul>
 						</nav>

@@ -1,17 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
+import './../../style/slider.scss';
 
-export default class Top extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			
-		}
-	}
-
+export default class Top extends Component {
 	setHeight(){
 		let slider = document.querySelector(".slider");
-		let height = document.documentElement.clientHeight - 88;
+		let height = document.documentElement.clientHeight;
 		slider.style.height = height + 'px';
 	}
 

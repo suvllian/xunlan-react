@@ -1,0 +1,19 @@
+.image-title {
+	overflow: hidden;
+
+	img {
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+.image-title .title {
+	position: absolute;
+	width: 100%;
+	z-index: 5;
+	transition: all 0.3s ease 0s;
+	transform: translate3d(0px, 50px, 0px);
+	opacity: 0;
+
+
+}	

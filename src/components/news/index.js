@@ -1,18 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {Link} from 'react-router';
 
-export default class News extends React.Component {
-	constructor(props) {
-		super(props);
+import Daily from './daily.js';
+import Achieve from './achieve.js';
 
-		this.state = {
-			
-		}
-	}
-
+export default class News extends Component {
 	render() {
 		return (
 			<div>
-				<p>hahah</p>
+				<Daily />
+				<Achieve />
 			</div>
 		)
 	}
