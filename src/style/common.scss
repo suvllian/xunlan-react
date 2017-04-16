@@ -13,6 +13,7 @@ body{
     height: 100%;
     line-height: 28px;
     position: relative;
+    min-width: 1200px;
 }
 
 a{
@@ -23,7 +24,7 @@ a{
 	width:1170px;
 	height:100%;
 	margin:0 auto;
-	padding:48px 32px;
+	padding: 28px;
 	overflow:hidden;
 
 	&:after, &:before{
@@ -74,9 +75,9 @@ a{
 /* 标题类型二 */
 .section-title-2 {
 	width: 100%;
-	margin-bottom: 5em;
 
 	h2{
+		margin: 0;
 		font-size: 24px;
 		font-weight: 400;
 		letter-spacing: 2px;
@@ -105,6 +106,14 @@ h1, h2, h3, h4, h5, h6{
 	width: 25%;
 	float: left;
 	position: relative;
+	overflow: hidden;
+}
+
+.col-md-6 {
+	width: 50%;
+	float: left;
+	position: relative;
+	overflow: hidden;
 }
 
 img{

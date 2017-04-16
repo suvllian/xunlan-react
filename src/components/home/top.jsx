@@ -17,7 +17,7 @@ export default class Top extends Component {
 			<section className="slider">	
 				<div className="container">
 					<div className="section-inner">
-						<h1 className="welcome-h">欢迎来到讯澜工作社</h1>
+						<h1 className="welcome-h"></h1>
 					</div>
 				</div>
 			</section>

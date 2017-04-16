@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class Top extends Component {
+export default class Header extends Component {
 	render() {
 		return (
 			<div className="section-title-1 text-center">	

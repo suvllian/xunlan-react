@@ -1,1 +1,35 @@
+.daily-block {
+	color: #777;
+	overflow: hidden;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
+	&:last-child {
+		background-color: #eee;
+		border-bottom: none;
+	}
+
+	.col-md-6 {
+		padding: 0 16px ;
+	}
+}
+
+.welfare {
+	background-color:  rgba(45, 64, 89, 0.1);
+	padding: 36px 0;
+}
+
+.welfare-block {
+	color: #777;
+	overflow: hidden;
+	margin-bottom: 48px; 
+
+	.container {
+		background-color: #fff;
+		padding: 0;
+	}
+
+	.welfare-p {
+		padding: 10px 16px;	
+	}
+}

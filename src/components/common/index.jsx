@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Nav from './nav.js';
-import Footer from './footer.js';
+import Nav from './nav.jsx';
+import Footer from './footer.jsx';
 import './../../style/common.scss';
 
 export default class App extends Component{
