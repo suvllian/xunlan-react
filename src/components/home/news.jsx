@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import SectionHeader from './section-header.jsx';
-import './../../style/news.scss';
 
 export default class Footer extends Component {
 	render() {

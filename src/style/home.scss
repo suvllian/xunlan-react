@@ -1,0 +1,133 @@
+/* 轮播图 */
+.slider {
+	position: relative;
+	width: 100%;
+	margin-top: 88px;
+	filter: brightness(0.92);
+
+	.slider-item {
+		width: 100%;
+		height: 888px;
+		position: relative;
+		float: left;
+		margin-right: -100%;
+		transition: 0.6s all ease;
+		z-index: 1;
+		opacity: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.slider-active {
+		z-index: 2;
+		opacity: 1;
+		display: block;
+	}
+}
+
+/* 新闻部分 */
+.news{
+	background-color: #f9f9f9;
+	clear: both;
+
+	.col-md-4{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.img-group{
+	background-color: #fff;
+	border-radius: 7px;
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    z-index: 9;
+    cursor: pointer;
+
+    &:focus, &:hover {
+    	img {
+    		opacity: 0.7;
+    	}
+
+	   	p {
+	   		color: #484c50;
+	   	}
+    }
+}
+
+.news-text{
+	padding: 30px 10px 10px 20px;
+    text-align: center;
+
+    h2 {
+	    color: #484c50;
+	    font-size: 18px;
+	    font-weight: bold;
+	    margin: 0 0 10px;
+	}
+
+	p {
+	    color: #85919d;
+	    transition: all 0.5s ease 0s;
+	    padding-bottom: 1.5em;
+	    text-overflow : ellipsis
+	}
+}
+
+/* 联系我们 */
+.connect {
+	.col-md-6{
+		input{
+			width: 90%;
+		}
+
+		&:nth-child(2){
+			input{
+				width: 100%;
+			}
+		}
+	}
+
+	textarea{
+		width: 100%;
+		height: 220px;
+	}
+}
+
+.form-control{
+	margin-bottom: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.42857;
+    padding: 8px 16px;
+    transition: all 0.15s ease 0s;
+
+    &:focus, &:active{
+    	border-bottom:1px dotted #00adb5;
+    }
+}
+
+.connect-p{
+	color: #848484;
+    font-family: "Open Sans",Arial,serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+.item{
+	list-style: none;
+    letter-spacing: 1px;
+    @extend .connect-p;
+}

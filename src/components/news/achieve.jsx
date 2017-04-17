@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './../../style/achieve.scss';
 
 export default class Achieve extends Component {
 	render() {

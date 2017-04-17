@@ -5,11 +5,12 @@ $logoColor:#00adb5;
 	height: $height;
 	width: 100%;
 	padding: 0;
-	position: relative;
+	position: fixed;
 	top: 0;
 	left: 0;
 	background: white;
 	box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.22);
+	z-index: 100;
 
 	.header-container{
 		width: 1170px;
@@ -128,22 +129,11 @@ $logoColor:#00adb5;
 		.active {
 			background-color: #00adb5;
 			color: #fff;
-			height: $height;
+			height: 88px;
+
 			a{
 				color: #fff;
 			}
 		}
-	}
-}
-
-@media screen and ( max-width:1200px ) {
-	.header {
-		width: 970px;
-	}
-}
-
-@media screen and ( max-width:1000px ) {
-	.header {
-		width: 820px;
 	}
 }

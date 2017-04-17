@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './../../style/connect.scss';
 
 export default class Connect extends Component {
 	constructor(props) {
@@ -19,8 +18,8 @@ export default class Connect extends Component {
 							<h2>联系我们</h2>
 						</div>
 						<form>
-							<div className="right">
-								<p className="p">Get in touch with us. Feel Free to use contact below. </p>
+							<div className="col-md-6">
+								<p className="connect-p">Get in touch with us. Feel Free to use contact below. </p>
 								<ul>
 									<li className="item">
 										<i></i>
@@ -41,7 +40,7 @@ export default class Connect extends Component {
 								</ul>
 							</div>
 
-							<div className="left">
+							<div className="col-md-6">
 								<div className="col-md-6">
 									<input className="form-control" placeholder="姓名" type="text" />
 								</div>

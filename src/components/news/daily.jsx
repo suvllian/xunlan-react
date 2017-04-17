@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './../../style/daily.scss';
 
 export default class Daily extends Component {
 	render() {

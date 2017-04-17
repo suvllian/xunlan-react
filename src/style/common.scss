@@ -18,6 +18,11 @@ body{
 
 a{
 	text-decoration:none;
+	outline: none;
+}
+
+:focus{
+	outline: none;
 }
 
 .container{
@@ -26,6 +31,7 @@ a{
 	margin:0 auto;
 	padding: 28px;
 	overflow:hidden;
+	position: relative;
 
 	&:after, &:before{
 		float:none;
@@ -96,14 +102,32 @@ h1, h2, h3, h4, h5, h6{
 	line-height: 1.1;
 }
 
-.row::after{
-	clear: both;
-	content: " ";
-    display: table;
+.h3{
+	color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    padding: 0 0 20px;
+    font-size: 24px;
+}
+
+.row {
+	width: 100%;
+
+	&::after{
+		clear: both;
+		content: " ";
+	    display: table;
+	}
 }
 
 .col-md-3 {
 	width: 25%;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+.col-md-4{
+	width: 33.3333%;
 	float: left;
 	position: relative;
 	overflow: hidden;
@@ -116,9 +140,22 @@ h1, h2, h3, h4, h5, h6{
 	overflow: hidden;
 }
 
+.col-md-12{
+	width: 100%;
+	position:relative;
+	float: left;
+}
+
 img{
 	max-width: 100%;
 	height: auto;
 	border: 0 none;
 	vertical-align: middle;
+}
+
+.response-img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    transition: 0.3s all ease;
 }
