@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
 
 const navItems = [
-		{ title: "组织介绍"},	
-		{ title: "部门介绍"},	
-		{ title: "讯澜大事记"},	
-		{ title: "讯澜生活"},	
-		{ title: "讯澜引力"},	
+		{ title: "组织介绍", isCurrent: true},	
+		{ title: "部门介绍", isCurrent: false},	
+		{ title: "讯澜大事记", isCurrent: false},	
+		{ title: "讯澜生活", isCurrent: false},	
+		{ title: "讯澜引力", isCurrent: false},	
 	]
 
 export default class AboutHeader extends Component{
@@ -18,7 +17,11 @@ export default class AboutHeader extends Component{
 					<ul>
 						{
 							navItems.map((item, index) => 
-								<li key={index}>
+								<li key={index} 
+								    className={(this.props.currentIndex === index) ? 'active' : ''}
+								    onMouseEnter={this.sliderHeader.bind(this, index)}
+								    onMouseLeave={this.resetHeader.bind(this)}
+								    onClick={this.setActiveIndex.bind(this, index)}>
 									<span></span>	
 									{item.title}
 								</li>
@@ -28,5 +31,21 @@ export default class AboutHeader extends Component{
 				</div>
 			</header>
 		)
+	}
+
+	sliderHeader(index){
+		let blueSlider = this.refs.blueSlider;
+		// 动态获取li的宽度
+		let width      = parseInt(blueSlider.offsetWidth);
+		let leftOffset = index * width;
+		blueSlider.style.left = leftOffset + "px";
+	}
+
+	setActiveIndex(index){
+		this.props.setActive(index);
+	}
+
+	resetHeader(){
+		this.sliderHeader(this.props.currentIndex);
 	}
 }

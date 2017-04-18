@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
 
 import Daily from './daily.jsx';
 import Achieve from './achieve.jsx';

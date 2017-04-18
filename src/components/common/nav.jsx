@@ -12,6 +12,7 @@ export default class Nav extends Component {
 			items: [
 				{ title: "首页" , link: "/", isActive: true},
 				{ title: "新闻部" , link: "/news", isActive: false},
+				{ title: "技术部" , link: "/tech", isActive: false},
 				{ title: "关于讯澜" , link: "/about", isActive: false},
 			],
 			currentItem: "首页"

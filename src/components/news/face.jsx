@@ -18,14 +18,12 @@ export default class Face extends Component {
 					<div className="row face-water">
 						{
 							[1,1,1,1,1, 1,1,1,1,1, 1,1].map((item, index) => 
-								<div className="face-block">
+								<div className="face-block" key={index}>
 									<div className="image-title">	
-										<a href="">
-											<img src={ "/static/" + (index+1) + ".jpg"} />
-											<div className="title text-center">
-												<h4>Project {index+1}</h4>
-											</div>
-										</a>
+										<img src={ "/static/" + (index+1) + ".jpg"} />
+										<div className="title text-center">
+											<h4>Project {index+1}</h4>
+										</div>
 									</div>
 								</div>
 							)

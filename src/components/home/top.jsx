@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 
 import Background1 from './../../assets/home-1.jpg';
 import Background2 from './../../assets/home-2.jpg';
-import Background3 from './../../assets/home-1.jpg';
-import Background4 from './../../assets/home-2.jpg';
+import Background3 from './../../assets/home-3.jpg';
+import Background4 from './../../assets/home-1.jpg';
 import Background5 from './../../assets/home-3.jpg';
 
 export default class Top extends Component {
@@ -11,30 +11,23 @@ export default class Top extends Component {
 		super(props);
 
 		this.state = {
-			liLength: 5,
+			liLength: 3,
 			currentItem: 1
 		}
 	}
 
 	render() {
+		let array = (new Array(this.state.liLength)).fill(1);
 		return (
 			<section className="slider">	
 				<ul className="slider-items">
-					<li className="slider-item slider-active">
-						<img src={ Background1 } />
-					</li>
-					<li className="slider-item">
-						<img src={ Background2 } />
-					</li>
-					<li className="slider-item">
-						<img src={ Background3 } />
-					</li>
-					<li className="slider-item">
-						<img src={ Background4 } />
-					</li>
-					<li className="slider-item">
-						<img src={ Background5 } />
-					</li>			
+				{
+					array.map((item, index) =>
+						<li className={((index+1) == this.state.currentItem) ? "slider-item slider-active" : "slider-item"}>
+							<img src={ require("./../../assets/home-" + (index+1) + ".jpg") } />
+						</li>
+					)
+				}			
 				</ul>
 			</section>
 		)
@@ -68,5 +61,10 @@ export default class Top extends Component {
 		this.slider = document.querySelectorAll(".slider-item");
 		let slideImage = this.slideImage.bind(this);
 		this.handle = setInterval(slideImage, 4000);
+
+		let height = document.body.clientWidth;
+		this.slider.forEach((item, index) => {
+			item.style.height = height * 2 / 3 + "px";
+		});
 	}	
 }
