@@ -1,11 +1,5 @@
 import React, {Component} from 'react';
 
-import Background1 from './../../assets/home-1.jpg';
-import Background2 from './../../assets/home-2.jpg';
-import Background3 from './../../assets/home-3.jpg';
-import Background4 from './../../assets/home-1.jpg';
-import Background5 from './../../assets/home-3.jpg';
-
 export default class Top extends Component {
 	constructor(props) {
 		super(props);

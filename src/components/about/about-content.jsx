@@ -6,6 +6,7 @@ export default class AboutContent extends Component{
 		return (
 			<article>
 				<div className="content container">
+					<img src={ require("./../../assets/about-item1-1.jpg") } />
 					<p>
 						讯澜工作社是直属于校党委宣传部的学生宣传思想工作团队，担负着网络维护、专题制作、稿件编辑、官方微博微信运营等重要工作。
 					</p>
@@ -22,7 +23,7 @@ export default class AboutContent extends Component{
 						经过12年的执着进取，讯澜工作社已发展成为在校内有一定影响力的宣传思想工作学生团队。
 					</p>
 					<p>
-						经过12年的执着进取，讯澜工作社已发展成为在校内有一定影响力的宣传思想工作学生团队。
+						<strong>我们的团队理念：</strong>执着、进步、高效、卓越。
 					</p>
 				</div>
 			</article>

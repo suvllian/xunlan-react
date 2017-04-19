@@ -4,14 +4,8 @@ export default class Daily extends Component {
 	render() {
 		return (
 			<section className="daily">	
-				<div className="container">
-					<div className="row">
-						<div className="col-md-12">
-							<div className="section-title-2 text-center">
-								<h2>我们的日常</h2>
-							</div>
-						</div>
-					</div>
+				<div className="section-title-1 text-center">
+					<h2>我们的<span className="blue-span">日常</span></h2>
 				</div>
 
 				<div className="daily-block">

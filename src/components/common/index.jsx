@@ -5,6 +5,7 @@ import './../../style/common.scss';
 import './../../style/home.scss';
 import './../../style/news.scss';
 import './../../style/about.scss';
+import './../../style/tech.scss';
 
 export default class App extends Component{
 	render() {

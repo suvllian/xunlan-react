@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Daily from './daily.jsx';
+import Product from './product.jsx';
 
 
 export default class Techonlogy extends Component {
@@ -7,6 +8,7 @@ export default class Techonlogy extends Component {
 		return (
 			<div>
 				<Daily />
+				<Product />
 			</div>
 		)
 	}

@@ -8,7 +8,7 @@ import Face from './face.jsx';
 export default class News extends Component {
 	render() {
 		return (
-			<div>
+			<div className="news-department">
 				<Daily />
 				<Achieve />
 				<Welfare />

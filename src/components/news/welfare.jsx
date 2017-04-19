@@ -5,12 +5,8 @@ export default class Welfare extends Component {
 		return (
 			<section className="welfare">	
 				<div className="container">
-					<div className="row">
-						<div className="col-md-12">
-							<div className="section-title-2 text-center">
-								<h2>我们的福利</h2>
-							</div>
-						</div>
+					<div className="section-title-1 text-center">
+						<h2>我们的<span className="blue-span">福利</span></h2>
 					</div>
 				</div>
 

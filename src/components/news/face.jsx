@@ -5,12 +5,8 @@ export default class Face extends Component {
 		return (
 			<section className="news-face">	
 				<div className="container">
-					<div className="row">
-						<div className="col-md-12">
-							<div className="section-title-2 text-center">
-								<h2>我们的面孔</h2>
-							</div>
-						</div>
+					<div className="section-title-1 text-center">
+						<h2>我们的<span className="blue-span">面孔</span></h2>
 					</div>
 				</div>
 

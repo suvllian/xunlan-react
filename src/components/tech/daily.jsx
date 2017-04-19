@@ -5,12 +5,8 @@ export default class Daily extends Component {
 		return (
 			<section className="daily">	
 				<div className="container">
-					<div className="row">
-						<div className="col-md-12">
-							<div className="section-title-2 text-center">
-								<h2>我们的日常</h2>
-							</div>
-						</div>
+					<div className="section-title-2 text-center">
+						<h2>我们的日常</h2>
 					</div>
 				</div>
 

@@ -7,11 +7,10 @@
 body{
 	width:100%;
 	color: #85919d;
-    font-family: "Roboto",Arial,sans-serif;
+    font-family: "Lato","PingFang SC","Microsoft YaHei",sans-serif;
     font-size: 16px;
     font-weight: 300;
     height: 100%;
-    line-height: 28px;
     position: relative;
     min-width: 1200px;
 }
@@ -38,35 +37,15 @@ a{
 	}
 }
 
-.submit-btn{
-	cursor: pointer;
-	background: #00adb5 none repeat scroll 0 0;
-    border: 2px solid #00adb5;
-    color: #fff;
-    border-radius: 20px;
-    font-family: "Open Sans",Arial,serif;
-    font-weight: 400;
-    margin:0 4px 4px 0;
-    line-height: 1.42857;
-    padding: 8px 16px;
-    text-align: center;
-    vertical-align: middle;
-    transition: all 0.5s ease 0s;
-
-    &:focus, &:active, &:hover{
-    	background: #00c5cf;
-    	border: 2px solid #00c5cf;
-    }
-}
 
 /* 标题类型一 */
 .section-title-1{
 	width: 100%;
-	margin-bottom: 5em;
+	margin-bottom: 2.8em;
 
 	h2 {
 		font-weight: 300;
-		font-size: 42px;
+		font-size: 38px;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 	}
@@ -89,6 +68,11 @@ a{
 		letter-spacing: 2px;
 		text-transform: uppercase;
 	}
+}
+
+.blue-span{
+	color: #00adb5;
+	text-shadow: 0px 0px 5px #fff;
 }
 
 /* 文本居中 */

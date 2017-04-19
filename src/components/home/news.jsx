@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-import SectionHeader from './section-header.jsx';
 
 export default class Footer extends Component {
 	render() {
 		return (
 			<section className="news">
 				<div className="container">
-					<SectionHeader />
+					<div className="section-title-1 text-center">	
+						<h2><span className="blue-span">讯澜</span>焦点</h2>
+					</div>
 					<div className="row">
 						{
 							[1,2,3,4,5,6].map((item, index) => 

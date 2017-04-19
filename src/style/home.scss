@@ -119,15 +119,74 @@
 
 .connect-p{
 	color: #848484;
-    font-family: "Open Sans",Arial,serif;
     font-size: 18px;
     font-weight: 300;
-    margin-bottom: 18px;
+    padding-bottom: 18px;
     line-height: 1.8;
+    position: relative;
+
+    &::after {
+    	width: 50%;
+    	height: 1px;
+    	background-color: #00adb5;
+    	content: "";
+    	display: block;
+    	position: absolute;
+    	bottom: 8px;
+    	left: 0;
+    }
+}
+
+.submit-btn{
+	cursor: pointer;
+	background: #00adb5 none repeat scroll 0 0;
+    border: 2px solid #00adb5;
+    color: #fff;
+    border-radius: 10px;
+    margin:0 4px 4px 0;
+    padding: 8px 16px;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.5s ease 0s;
+
+    &:focus, &:active, &:hover{
+    	background: #00c5cf;
+    	border: 2px solid #00c5cf;
+    }
 }
 
 .item{
 	list-style: none;
     letter-spacing: 1px;
-    @extend .connect-p;
+    color: #848484;
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 18px;
+    line-height: 1.8;
+}
+
+/* 友情链接 */
+.friend{
+	background-color: #f9f9f9;
+}
+
+.friend-item{
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+	background-color: #fff;
+	transition: 0.5s color ease;
+
+	&:hover {
+		background-color: #f9f9f9;
+
+		a { color: #000; }
+	}
+
+	a{
+		color: #85919d;
+		display: block;
+		padding: 8px 0;
+		transition: 0.5s color ease;	
+	}
 }

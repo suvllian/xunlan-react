@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './../../style/friend.scss';
 
 const friendItems = [
 	{title: "长安大学官网", src: "http://www.chd.edu.cn/"},
@@ -15,7 +14,7 @@ export default class Footer extends Component {
 			<section className="friend">
 				<div className="container">
 					<div className="section-title-1 text-center">	
-						<h2>友情链接</h2>
+						<h2><span className="blue-span">网站</span>链接</h2>
 					</div>
 					<div className="friend-items">
 						{

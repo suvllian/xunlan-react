@@ -15,15 +15,15 @@ export default class Connect extends Component {
 				<div className="container">
 					<div className="section-inner">
 						<div className="section-title-1 text-center">	
-							<h2>联系我们</h2>
+							<h2>联系<span className="blue-span">我们</span></h2>
 						</div>
 						<form>
 							<div className="col-md-6">
-								<p className="connect-p">Get in touch with us. Feel Free to use contact below. </p>
+								<p className="connect-p">欢迎你与我们分享你的想法</p>
 								<ul>
 									<li className="item">
 										<i></i>
-										地址:行政楼
+										地址:行政楼13层1306室
 									</li>
 									<li className="item">
 										<i></i>
