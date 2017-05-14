@@ -17,4 +17,7 @@ export default class News extends Component {
 		)
 	}
 
+	componentDidMount() {
+		window.scrollTo(0,0);
+	}
 }

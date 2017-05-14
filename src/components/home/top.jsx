@@ -17,7 +17,7 @@ export default class Top extends Component {
 				<ul className="slider-items">
 				{
 					array.map((item, index) =>
-						<li className={((index+1) == this.state.currentItem) ? "slider-item slider-active" : "slider-item"}>
+						<li key={index} className={((index+1) == this.state.currentItem) ? "slider-item slider-active" : "slider-item"}>
 							<img src={ require("./../../assets/home-" + (index+1) + ".jpg") } />
 						</li>
 					)

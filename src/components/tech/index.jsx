@@ -12,4 +12,8 @@ export default class Techonlogy extends Component {
 			</div>
 		)
 	}
+
+	componentDidMount() {
+		window.scrollTo(0,0);
+	}
 }

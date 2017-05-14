@@ -30,4 +30,8 @@ export default class About extends Component{
 	setActive(index){
 		this.setState({ currentIndex: index});
 	}
+
+	componentDidMount() {
+		window.scrollTo(0,0);
+	}
 }

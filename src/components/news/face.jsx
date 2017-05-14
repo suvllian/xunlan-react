@@ -16,7 +16,7 @@ export default class Face extends Component {
 							[1,1,1,1,1, 1,1,1,1,1, 1,1].map((item, index) => 
 								<div className="face-block" key={index}>
 									<div className="image-title">	
-										<img src={ "/static/" + (index+1) + ".jpg"} />
+										<img src={ "/static/img/" + (index+1) + ".jpg"} />
 										<div className="title text-center">
 											<h4>Project {index+1}</h4>
 										</div>
