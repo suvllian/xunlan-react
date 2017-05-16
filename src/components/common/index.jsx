@@ -6,7 +6,6 @@ import Footer from './footer.jsx';
 import './../../style/reset.scss';
 import './../../style/common.scss';
 import './../../style/news.scss';
-import './../../style/about.scss';
 import './../../style/tech.scss';
 
 

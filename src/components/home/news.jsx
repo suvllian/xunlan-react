@@ -23,7 +23,7 @@ export default class Footer extends Component {
 											<img src="http://suvllian.com/static/images/travel/qingdao1.jpg" className="response-img" />
 											<div className="news-info">
 												<h2 className="news-title">长安大学讯澜工作社长安大学讯澜工作社</h2>
-												<p className="news-p">新一轮纳新开始了长安大学讯澜工作社长安大学讯澜工作社</p>
+												<p className="news-p">新一轮纳新开始了长安大学新一轮纳新开始了长安大学新一轮纳新开始了长安大学讯澜工作社长安大学讯澜工作社</p>
 												<p>2017-2-11</p>
 											</div>
 										</a>

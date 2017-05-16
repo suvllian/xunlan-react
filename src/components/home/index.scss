@@ -291,6 +291,18 @@
 .news-p {
     color: #85919d;
     font-size: 14px;
-    text-overflow : ellipsis;
+    overflow: hidden;
+    line-height: 1.4em;
+    height: 2.8em;
+    position: relative;
+
+    &::after {
+        content: "...";
+        display: block;
+        font-weight: bold;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
 /* 新闻部分 */

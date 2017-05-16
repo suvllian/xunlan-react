@@ -2,7 +2,11 @@ import React, {Component} from 'react';
 
 import ImageBlock from './image.jsx';
 import AboutHeader from './about-header.jsx';
-import AboutContent from './about-content.jsx';
+
+import Organization from './organization.jsx';
+import Department from './department.jsx';
+
+require("./index.scss");
 
 export default class About extends Component{
 	constructor(props) {
@@ -21,10 +25,23 @@ export default class About extends Component{
 				<AboutHeader
 				    currentIndex={this.state.currentIndex} 
 				    setActive={this.setActive.bind(this)} />
-				<AboutContent
-				    currentIndex={this.state.currentIndex} />
+				{this.renderContent()}
 			</div>
 		)
+	}
+
+	renderContent() {
+		let currentIndex = this.state.currentIndex;
+
+		if (currentIndex == 0) {
+			return <Organization />
+		}
+
+		if (currentIndex == 1) {
+			return <Department />
+		}
+
+		return <Organization />
 	}
 
 	setActive(index){
