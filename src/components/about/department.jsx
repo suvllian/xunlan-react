@@ -20,7 +20,7 @@ export default class Department extends Component{
 					}
 				</div>
 
-				<div className="content">
+				<div className="about-padding">
 					<h2 className="about-h2">新闻编辑部</h2>
 					<p className="about-p">主要负责教育部中国大学生在线和【与道同行】共建平台的投稿工作。<br/>
 					对学校重大活动进行采稿、拍照工作，并及时上传、发表，以及采访稿的写作。</p>

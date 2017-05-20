@@ -1,28 +1,26 @@
 import React, {Component} from 'react';
 
 const navItems = [
-		{ title: "组织介绍", isCurrent: true},	
-		{ title: "部门介绍", isCurrent: false},	
-		{ title: "讯澜大事记", isCurrent: false},	
-		{ title: "讯澜生活", isCurrent: false},	
-		{ title: "讯澜引力", isCurrent: false},	
-	]
+	{ title: "组织介绍", isCurrent: true},	
+	{ title: "部门介绍", isCurrent: false},	
+	{ title: "讯澜大事记", isCurrent: false}
+]
 
 export default class AboutHeader extends Component{
 	render() {
 		return (
 			<header className="about-header">
 				<div className="container">
-					<div id="blue-slider" ref="blueSlider"></div>
+					<div className="blue-slider" ref="blueSlider"></div>
 					<ul>
 						{
 							navItems.map((item, index) => 
 								<li key={index} 
-								    className={(this.props.currentIndex === index) ? 'active' : ''}
+								    className={(this.props.currentIndex === index) ? 'active li-item' : 'li-item'}
 								    onMouseEnter={this.sliderHeader.bind(this, index)}
 								    onMouseLeave={this.resetHeader.bind(this)}
 								    onClick={this.setActiveIndex.bind(this, index)}>
-									<span></span>	
+									<span className="color-block"></span>	
 									{item.title}
 								</li>
 							)

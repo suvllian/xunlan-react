@@ -9,6 +9,7 @@
     .slider-item {
         width: 100%;
         position: relative;
+        display: block;
         float: left;
         margin-right: -100%;
         transition: 0.6s all ease;
@@ -24,9 +25,10 @@
     .slider-active {
         z-index: 2;
         opacity: 1;
-        display: block;
+        
     }
 }
+
 /* 轮播图 */
 
 /* 联系我们 */
@@ -106,6 +108,7 @@
 /* 友情链接 */
 .friend {
     background-color: #f9f9f9;
+    width: 100%;
 }
 
 .friend-items {
@@ -137,6 +140,7 @@
 /* 热门内容链接 */
 .hot-article {
     height: 323px;
+    width: 100%;
     overflow: hidden;
 
     .col-md-4 {
@@ -207,6 +211,7 @@
 
 /* 新闻部分 */
 .news{
+    width: 100%;
     background-color: #f9f9f9;
     clear: both;
     background-size: 80% 100%;

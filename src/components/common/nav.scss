@@ -72,14 +72,14 @@ $logoColor: #00adb5;
 }
 
 .header-nav {
-    display: block;
+    display: table;
     float: right;
     position: relative;
 
     li{
 		float: left;
 		height: 0;
-	    padding-top: 1px;
+		display: table;
 		position: relative;
 		transition: 0.5s background-color height ease;
 

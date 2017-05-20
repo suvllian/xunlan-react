@@ -4,7 +4,7 @@ import {Link} from 'react-router';
 export default class Organization extends Component{
 	render() {
 		return (
-			<div className="content container">
+			<div className="about-padding container">
 				<img src={ require("./../../assets/about-item1-1.jpg") } />
 				<p className="about-p">
 					讯澜工作社是直属于校党委宣传部的学生宣传思想工作团队，担负着网络维护、专题制作、稿件编辑、官方微博微信运营等重要工作。
