@@ -7,7 +7,7 @@ export default class TimeLine extends Component {
       data: [
         {
           year: '2017年',
-          staff: ['讯澜工作社代表长安大学承办“陕西省h5设计大赛”', '讯澜工作社各部门规章制度改革']
+          staff: ['讯澜工作社代表长安大学承办“陕西省h5设计大赛”', '讯澜工作社各部门规章制度完善和更新']
         },
         {
           year: '2016年',

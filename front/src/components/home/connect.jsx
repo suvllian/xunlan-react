@@ -22,7 +22,7 @@ export default class Connect extends Component {
 							<ul>
 								<li className="connect-item">
 									<i></i>
-									地址：行政楼13层1306室
+									地址：行政楼13层1305室
 								</li>
 								<li className="connect-item">
 									<i></i>
@@ -30,7 +30,7 @@ export default class Connect extends Component {
 								</li>
 								<li className="connect-item">
 									<i></i>
-									邮箱：suvllian@163.com
+									邮箱：chdxunlan@163.com
 								</li>
 								<li className="connect-item">
 									<i></i>
