@@ -18,7 +18,7 @@ export default class Footer extends Component {
 						<div className="col-md-7">
 							{
 								[1,2,3].map((item, index) => 
-									<div className="col-md-4">
+									<div className="col-md-4" key={index}>
 										<a className="news-block">
 											<img src="http://suvllian.com/static/images/travel/qingdao1.jpg" className="response-img" />
 											<div className="news-info">

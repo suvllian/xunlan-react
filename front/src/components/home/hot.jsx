@@ -5,11 +5,13 @@ export default class Hot extends Component {
 		return (
 			<section className="hot-article row">
 			{
-				[0,1,2].map((item, index) => 
+				this.props.hot.map((item, index) => 
 					<div className="col-md-4" key={index}>
-						<img className="hot-img" src={ "./static/img/hot" + (index+1) + ".jpg"}  />
-						<p className="hot-title">微信公众号文章</p>
-						<p className="hot-span">微信公众号文章</p>
+					  <a target="_blank" href={item.link}>
+							<img className="hot-img" src={require("./../../assets/" + item.src)} />
+							<p className="hot-title">{item.title}</p>
+							<p className="hot-span">{item.content}</p>
+						</a>
 					</div>
 				)
 			}

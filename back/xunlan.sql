@@ -1,0 +1,8 @@
+CREATE DATABASE xunlan DEFAULT CHARACTER SET gbk COLLATE gbk_chinese_ci;
+
+CREATE TABLE IF NOT EXISTS friendlink (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  src text NOT NULL,
+  content text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;

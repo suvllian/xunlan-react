@@ -5,9 +5,7 @@ export default class Slider extends Component{
 	constructor(props) {
 		super(props);
 
-		this.sliderImage = this.props.slider;
 		this.state = {
-			liLength: this.sliderImage.length,
 			currentItem: 1
 		}
 	}
@@ -17,14 +15,16 @@ export default class Slider extends Component{
 			<div className="slider" ref="sliderContainer">
 				<ul className="slider-items">
 				{	
-					this.sliderImage.map((item, index) =>
+					this.props.slider.map((item, index) =>
 					{
 						let klass = ((index+1) == this.state.currentItem) ? 
 						  "slider-item slider-active" : "slider-item";
 						return (
-						  <li className={klass} key={index}>
-						    <img src={require("./../../assets/" + item.imageSrc)} />
-						  </li>
+							<a target="_blank" href={item.link} key={index}>
+							  <li className={klass}>
+							    <img src={require("./../../assets/" + item.src)} />
+							  </li>
+						  </a>
 						)
 					})
 				}	
@@ -35,9 +35,9 @@ export default class Slider extends Component{
 
 	nextImage() {
 		let next = 0,
-	        now = this.state.currentItem;
+	      now = this.state.currentItem;
 		
-		if (now == this.state.liLength) {
+		if (now == this.props.slider.length) {
 			next = 1;
 		} else {
 			next = now + 1;

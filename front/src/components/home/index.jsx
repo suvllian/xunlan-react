@@ -6,29 +6,52 @@ import Connect from './connect.jsx';
 import Friend from './friend.jsx';
 import Hot from './hot.jsx';
 
+import api from './../../api'
+
 require('./index.scss');
 
-const sliderImage = [
-  {imageSrc: 'home-1.jpg'},
-  {imageSrc: 'home-2.jpg'},
-  {imageSrc: 'home-3.jpg'}
-]
-
 export default class Home extends Component{
+	constructor(props) {
+		super(props);
+	  
+	  this.state = {
+	  	sliderImage: [],
+	  	hotImage: [],
+	  	friendLink: []
+	  }	
+	}
+
+
 	render() {
+		const { sliderImage, hotImage, friendLink } = this.state;
 		return (
 			<div>
-				{ this.props.params.name }
 				<Slider slider={sliderImage}/>
 				<News />
-				<Hot />
+				<Hot hot={hotImage}/>
 				<Connect />
-				<Friend />
+				<Friend friends={friendLink}/>
 			</div>
 		)
 	}
 
+	getIndexBanner() {
+		api.getIndexBanner().then((data) => {
+			this.setState({ sliderImage: data })
+		})
+
+		api.getNewsBanner().then((data) => {
+			this.setState({ hotImage: data })
+		})
+
+		api.getFriendLink().then((data) => {
+			this.setState({ friendLink: data })
+		})
+	}
+
 	componentDidMount() {
 		window.scrollTo(0,0);
+		this.getIndexBanner();
+		
 	}
 }
