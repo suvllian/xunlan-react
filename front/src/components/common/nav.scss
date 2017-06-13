@@ -1,6 +1,7 @@
 $height: 88px;
 $smallHeight: 48px;
 $logoColor: #00adb5;
+$minWidth: 1270px;
 
 .header{
 	height: $height;
@@ -17,7 +18,7 @@ $logoColor: #00adb5;
 }
 
 .header-container{
-	width: 1170px;
+	width: $minWidth;
 	padding: 0px 15px;
 	margin: 0 auto;
 }

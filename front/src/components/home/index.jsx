@@ -17,17 +17,18 @@ export default class Home extends Component{
 	  this.state = {
 	  	sliderImage: [],
 	  	hotImage: [],
-	  	friendLink: []
+	  	friendLink: [],
+	  	newsList: []
 	  }	
 	}
 
 
 	render() {
-		const { sliderImage, hotImage, friendLink } = this.state;
+		const { sliderImage, hotImage, friendLink, newsList } = this.state;
 		return (
 			<div>
 				<Slider slider={sliderImage}/>
-				<News />
+				<News news={newsList}/>
 				<Hot hot={hotImage}/>
 				<Connect />
 				<Friend friends={friendLink}/>
@@ -35,23 +36,17 @@ export default class Home extends Component{
 		)
 	}
 
-	getIndexBanner() {
-		api.getIndexBanner().then((data) => {
-			this.setState({ sliderImage: data })
-		})
-
-		api.getNewsBanner().then((data) => {
-			this.setState({ hotImage: data })
-		})
-
-		api.getFriendLink().then((data) => {
-			this.setState({ friendLink: data })
+	getIndexData() {
+		api.getIndexData().then((data) => {
+			this.setState({ sliderImage: data.banner });
+			this.setState({ hotImage: data.hot });
+			this.setState({ friendLink: data.friend });
+			this.setState({ newsList: data.news });
 		})
 	}
 
 	componentDidMount() {
 		window.scrollTo(0,0);
-		this.getIndexBanner();
-		
+		this.getIndexData();
 	}
 }

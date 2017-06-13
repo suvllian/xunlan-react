@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch'
 
-const URL = "http://127.0.0.1/xunlan/index.php";
+const URL = "./static/api/index.php";
 
 const getInit = {
 	method: "GET",

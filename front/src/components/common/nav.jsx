@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router';
+import { Link, IndexLink } from 'react-router';
 
 import NavItem from './nav-item.jsx';
 require('./nav.scss');
@@ -26,7 +26,7 @@ export default class Nav extends Component {
 		return (
 			<header className={klass}>
 				<div className="header-container">
-					<h1 className="header-logo"><a href="">XUNLAN</a></h1>
+					<h1 className="header-logo"><IndexLink to="/">XUNLAN</IndexLink></h1>
 					<nav className="header-nav">
 						<NavItem changeActive={this.changeActive} items={this.state.items} currentItem={this.state.currentItem} />												
 					</nav>

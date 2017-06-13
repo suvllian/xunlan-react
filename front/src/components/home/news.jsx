@@ -8,6 +8,8 @@ const bgStyle = {
 
 export default class Footer extends Component {
 	render() {
+		const  newsList = this.props.news.slice(0, 3);
+
 		return (
 			<section className="news" style={bgStyle}>
 				<div className="container">
@@ -17,14 +19,14 @@ export default class Footer extends Component {
 					<div className="row">
 						<div className="col-md-7">
 							{
-								[1,2,3].map((item, index) => 
+								newsList.map((item, index) => 
 									<div className="col-md-4" key={index}>
-										<a className="news-block">
-											<img src="http://suvllian.com/static/images/travel/qingdao1.jpg" className="response-img" />
+										<a className="news-block" href={item.link} target="_blank">
+											<img src={item.imgSrc} className="response-img" />
 											<div className="news-info">
-												<h2 className="news-title">长安大学讯澜工作社长安大学讯澜工作社</h2>
-												<p className="news-p">新一轮纳新开始了长安大学新一轮纳新开始了长安大学新一轮纳新开始了长安大学讯澜工作社长安大学讯澜工作社</p>
-												<p>2017-2-11</p>
+												<h2 className="news-title">{item.title}</h2>
+												<p className="news-p">{item.brief}</p>
+												<p>{item.aTime}</p>
 											</div>
 										</a>
 									</div>
@@ -35,12 +37,12 @@ export default class Footer extends Component {
 						<div className="col-md-5">
 							<ul>
 								{
-									[1,2,3,4,5,6,7].map((item, index) => 
+									this.props.news.map((item, index) => 
 										<li className="news-item" key={index}>
-											<a href="" target="_blank">
-												<span>学校召开教师干部大会 宣布校长任免决定</span>
+											<a href={item.link} target="_blank" className="new-link">
+												<span>{item.title}</span>
 											</a>
-											<span className="text-right">2017-5-10</span>
+											<span className="text-right">{item.aTime}</span>
 										</li>	
 									)
 								}

@@ -1,31 +1,18 @@
-*{
-	padding:0;
-	margin:0;
-	box-sizing:border-box;
-}
+$minWidth: 1280px;
 
 body{
 	width: 100%;
 	color: #85919d;
-    font-family: "Lato","PingFang SC","Microsoft YaHei",sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    height: 100%;
-    position: relative;
-    min-width: 1200px;
-}
-
-a{
-	text-decoration:none;
-	outline: none;
-}
-
-:focus{
-	outline: none;
+  font-family: "Lato","PingFang SC","Microsoft YaHei",sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  height: 100%;
+  position: relative;
+  min-width: $minWidth;
 }
 
 .container{
-	width: 1280px;
+	width: $minWidth;
 	height: 100%;
 	margin: 0 auto;
 	padding: 28px;
@@ -159,10 +146,10 @@ img{
 }
 
 .response-img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-    transition: 0.3s all ease;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  transition: 0.3s all ease;
 }
 
 .text-right {
