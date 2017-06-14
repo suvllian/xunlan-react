@@ -16,3 +16,20 @@ CREATE TABLE IF NOT EXISTS newscontent (
   content text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `timeyear` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `year` varchar(256) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+
+CREATE TABLE IF NOT EXISTS `timevent` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `event` text NOT NULL,
+  `refYear` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `refYear` (`refYear`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+
+ALTER TABLE `timevent`
+  ADD CONSTRAINT `timeline` FOREIGN KEY (`refYear`) REFERENCES `timeyear` (`id`);

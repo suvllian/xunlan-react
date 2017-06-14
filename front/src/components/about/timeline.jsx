@@ -32,10 +32,11 @@ export default class TimeLine extends Component {
   }
 
   render() {
+  	console.log(this.props.timeline)
     return (
         <div className="container about-padding">
           {
-            this.state.data.map((item, bIndex) => {
+            this.props.timeline.map((item, bIndex) => {
               return (
                   <div className="time-box" key={bIndex}>
                     <div className="time-year">{item.year}</div>
@@ -43,7 +44,7 @@ export default class TimeLine extends Component {
                       {
                         item.staff.map((item, sIndex) => {
                           return (
-                              <p className="staffs" key={sIndex}>{item}</p>
+                              <p className="staffs" key={sIndex}>{item}年</p>
                           )
                         })
                       }

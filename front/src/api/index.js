@@ -8,6 +8,10 @@ exports.login = (formData) => {
 
 exports.getIndexData = () => {
 	let data = "concrete=getIndexData";
-	let promiseRes = getFetch(data);
-	return promiseRes;
+	return getFetch(data);
+}
+
+exports.getAboutData = () => {
+	let data = "concrete=getAboutData";
+	return getFetch(data);
 }

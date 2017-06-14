@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 
 import ImageBlock from './image.jsx';
 import AboutHeader from './about-header.jsx';
-
 import Organization from './organization.jsx';
 import Department from './department.jsx';
 import TimeLine from './timeline.jsx';
+
+import api from './../../api'
 
 require("./index.scss");
 
@@ -14,7 +15,8 @@ export default class About extends Component{
 		super(props);
 		
 		this.state = {
-			currentIndex: 0
+			currentIndex: 0, 
+			timeLine: []
 		}
 	}
 
@@ -32,7 +34,7 @@ export default class About extends Component{
 	}
 
 	renderContent() {
-		let currentIndex = this.state.currentIndex;
+		let { currentIndex, timeLine } = this.state;
 
 		if (currentIndex == 0) {
 			return <Organization />
@@ -43,7 +45,7 @@ export default class About extends Component{
 		} 
 
 		if (currentIndex == 2) {
-			return <TimeLine />
+			return <TimeLine timeline={timeLine}/>
 		} 
 
 		return <Organization />
@@ -53,7 +55,43 @@ export default class About extends Component{
 		this.setState({ currentIndex: index});
 	}
 
+	getAboutData() {
+		api.getAboutData().then((data) => {
+      let timeLineData = this.dealData(data);
+			this.setState({ timeLine: timeLineData })
+		});
+	}
+
+	dealData(data) {
+		let yearArray = [], count = 0, length = 0;
+    data.forEach((item, index) => {
+      yearArray.includes(item.year) ? '' : yearArray.push(item.year)
+    });
+    length = yearArray.length;
+
+    let timeLineArray = new Array(length).fill({});
+    yearArray.forEach((item, index) => {
+    	timeLineArray[index].year = item;
+    	timeLineArray[index].staff = [];
+    });
+
+    for(let j = 0; j < length; j++) {
+    	for (let i = 0, len = data.length; i < len; i++) {
+    		if (data[i].year === timeLineArray[j].year) {
+	    	  timeLineArray[j].staff.push(data[i].event);
+	    	} else {
+	    		j++;
+	    	}
+    	}
+    	i++;
+    }
+
+    console.log(timeLineArray);
+    return timeLineArray;
+	}
+
 	componentDidMount() {
 		window.scrollTo(0,0);
+		this.getAboutData();
 	}
 }
