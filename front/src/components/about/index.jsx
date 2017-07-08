@@ -63,30 +63,26 @@ export default class About extends Component{
 	}
 
 	dealData(data) {
-		let yearArray = [], count = 0, length = 0;
+		let yearArray = [];
     data.forEach((item, index) => {
       yearArray.includes(item.year) ? '' : yearArray.push(item.year)
     });
-    length = yearArray.length;
 
-    let timeLineArray = new Array(length).fill({});
+    let length = yearArray.length, temp = {},
+        timeLineArray = [];
     yearArray.forEach((item, index) => {
-    	timeLineArray[index].year = item;
-    	timeLineArray[index].staff = [];
+    	temp = {};
+    	temp.year = item;
+    	temp.staff = [];
+    	timeLineArray.push(temp);
     });
 
     for(let j = 0; j < length; j++) {
     	for (let i = 0, len = data.length; i < len; i++) {
-    		if (data[i].year === timeLineArray[j].year) {
-	    	  timeLineArray[j].staff.push(data[i].event);
-	    	} else {
-	    		j++;
-	    	}
+    		(data[i].year == timeLineArray[j].year) ? timeLineArray[j].staff.push(data[i].event) : '';
     	}
-    	i++;
     }
 
-    console.log(timeLineArray);
     return timeLineArray;
 	}
 
